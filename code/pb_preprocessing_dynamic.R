@@ -7,9 +7,11 @@ library(ggplot2)
 library(Matrix)
 library(slingshot)
 
-# this file preprocess the expression data of cells jointly into pseudobulk 
-# format it into a data.table, where column values are:
+# this script preprocesses the single cell expression data into pseudobulk 
+# either for all cells or for cells of a single lineage assigned by slingshot
+# formats it into a data.table, where column values are:
 # [genes, expression value, cell line, day]
+# produces expression PCs and cell line PCs based on the preprocessed data
 
 ## set hyperparameters
 # we can choose what kind of data we want to extract
