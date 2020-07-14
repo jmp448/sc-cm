@@ -1,22 +1,29 @@
 library(nlme)
 library(pbkrtest)
+library(readr)
 
-inputArgs <-  commandArgs(TRUE)
+inputArgs <- commandArgs(TRUE)
 cell_type <- inputArgs[1]
 chrom <- inputArgs[2]
 npcs <- inputArgs[3]
 
-expr <- readRDS(paste0("../data/sc/", cell_type, "/expr.rds"))
-tests <- readRDS(paste0("../data/gene_snps/chr", chrom, ".rds"))
-genes <- tests$gene
-genotypes <- readRDS(paste0("../data/sc/", cell_type, "/"))
-inds <- readRDS()
+exp.tot <- readRDS(paste0("../data/static_sc/", cell_type, "/exp.rds"))
+tests <- read_tsv(paste0("../data/static_sc/", cell_type, "/gene_snps/chr", chrom, ".tsv"))
+genotypes <- read.table(paste0("../data/static_sc/", cell_type, "/genotypes_05cut.txt"))
+genotypes$snp <- rownames(genotypes)
+genotypes <- tibble(genotypes)
+inds <- read_tsv(paste0("../data/static_sc/", cell_type, "/inds.tsv"))
+pcs <- readRDS(paste0("../data/static_sc/", cell_type, "/pcs.rds"))
 
-
-eQTLtest <- function(gene, SNP) {
-  exp <- data.frame(expr[,g])
-  inds <- data.frame()
+eQTLtest <- function(g, v, gt=genotypes, exp=exp.tot, assignments=inds, pc=pcs) {
+  exp.g = as_tibble(exp[g,])
+  gt.v = select(filter(genotypes, snp==v), -c(snp))
+  covars = as_tibble(pc[,1:npcs])
+  colnames(covars) <- paste0("PC_", seq(1, npcs))
+  fixed = bind_cols(gt.v, covars)
+  
 }
+
 for(i in c(start:end)){
   print(i)
   geno_subset <- geno[ ,snps.select[[i]][ ,3]]

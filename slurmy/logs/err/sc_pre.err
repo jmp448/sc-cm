@@ -1,0 +1,2402 @@
+Note that the current default version of R is 3.6.1.
+Warning message:
+In system2(command = python, args = paste0("\"", config_script,  :
+  running command ''/home/jpopp/.virtualenvs/r-reticulate/bin/python' "/home/jpopp/R/x86_64-pc-linux-gnu-library/3.6/reticulate/config/config.py" 2>/dev/null' had status 1
+
+Attaching package: 'Matrix'
+
+The following object is masked from 'package:reshape':
+
+    expand
+
+
+Attaching package: 'reshape2'
+
+The following objects are masked from 'package:reshape':
+
+    colsplit, melt, recast
+
+
+Attaching package: 'dplyr'
+
+The following object is masked from 'package:reshape':
+
+    rename
+
+The following objects are masked from 'package:stats':
+
+    filter, lag
+
+The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union
+
+Parsed with column specification:
+cols(
+  gene = col_character(),
+  chr = col_character(),
+  tss = col_double(),
+  end = col_double()
+)
+Parsed with column specification:
+cols(
+  .default = col_double(),
+  X1 = col_character()
+)
+See spec(...) for full column specifications.
+Performing log-normalization
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Centering and scaling data matrix
+  |                                                                              |                                                                      |   0%  |                                                                              |====                                                                  |   6%  |                                                                              |=========                                                             |  12%  |                                                                              |=============                                                         |  19%  |                                                                              |==================                                                    |  25%  |                                                                              |======================                                                |  31%  |                                                                              |==========================                                            |  38%  |                                                                              |===============================                                       |  44%  |                                                                              |===================================                                   |  50%  |                                                                              |=======================================                               |  56%  |                                                                              |============================================                          |  62%  |                                                                              |================================================                      |  69%  |                                                                              |====================================================                  |  75%  |                                                                              |=========================================================             |  81%  |                                                                              |=============================================================         |  88%  |                                                                              |==================================================================    |  94%  |                                                                              |======================================================================| 100%
+PC_ 1 
+Positive:  CENPF, MKI67, TOP2A, SNHG14, DLGAP5, ASPM, ARL6IP1, MTATP6P1, CCNB1, TPX2 
+	   UBE2C, CKS2, JARID2, HMMR, SMC4, AURKA, MIS18BP1, KPNA2, CENPE, BUB1B 
+	   VCAN, TTK, TUBA1C, CKAP2, KIF20B, JPT1, TDGF1, DPPA4, PTTG1, VCL 
+Negative:  MYL7, MYL4, ANKRD1, TNNT2, TTR, AFP, APOA2, APOA1, MYH6, TNNI1 
+	   NPPA, ACTC1, MYL3, EMC10, COL3A1, NPPB, TNNC1, PLN, TECRL, DCN 
+	   ACTA2, SMPX, NEBL, TRIM55, MEIS2, TRH, CRHBP, NR2F2, H19, FILIP1L 
+PC_ 2 
+Positive:  SFRP1, TPM1, AASS, TRDN, BEX2, BEX1, USP9X, MALAT1, CENPF, MIR302CHG 
+	   LINC01405, RAB17, LINC01356, MTRNR2L1, ASPM, LGALS1, TAGLN, TCEAL2, MYL9, CENPE 
+	   TTN, S100A6, CXCL5, LINC00458, BST2, RAI14, PODXL, RGS5, IDO1, VCAN 
+Negative:  MT2A, CRABP1, SIX6, NEFL, MT1E, PRAC1, IER3, MT1F, BNIP3, KRT18 
+	   MT1G, NPM1, PDGFA, PTMA, MT1X, GAPDH, HSPD1, GSTP1, ID2, CKB 
+	   MIR205HG, HSPE1, CCND1, HMGCS1, HSP90AA1, CD9, NANOG, TUBA1B, TERF1, TUBA1A 
+PC_ 3 
+Positive:  TOP2A, UBE2C, AURKA, MALAT1, TPX2, MKI67, CENPF, CDK1, DEPDC1, CENPE 
+	   SGO2, DLGAP5, KIF2C, KIF23, BNIP3, CKAP2L, ASPM, KPNA2, ID2, KIF14 
+	   HMMR, NUF2, CCNB1, G2E3, PLK1, NDC80, HJURP, CKS2, INCENP, PIF1 
+Negative:  RPL22L1, SLIRP, MIR302CHG, PCNA, DANCR, SNHG3, HSPE1, BEX1, NOP56, TPM3 
+	   TXN, C1QBP, PAK1IP1, FTL, CALM1, GPATCH4, MTRNR2L1, ACAT2, NPM1, RAN 
+	   PCLAF, PRDX1, CD24, SET, GAPDH, UCHL1, RRM2, SNHG19, GAL, MGST1 
+PC_ 4 
+Positive:  BNIP3, MALAT1, MIR205HG, DSP, USP9X, SYNE2, SERPINB9, TXNIP, SNHG14, NEFL 
+	   UGP2, AKAP12, DDIT4, VIM, ALCAM, ESRG, SAT1, ID2, CDH1, ZIC3 
+	   TTC3, TMSB4X, NRP2, PLAAT3, STC1, DST, SYT6, NEFM, PURPL, SOX2 
+Negative:  UBE2C, CKS2, AURKA, CCNB1, RPL22L1, KPNA2, CDK1, TOP2A, JPT1, KIF23 
+	   HMMR, CDCA8, DLGAP5, PTTG1, TPX2, AURKB, DEPDC1, L1TD1, CDC20, TTK 
+	   PLK1, RAN, LNCPRESS1, HJURP, CKAP2, ID3, CKS1B, KIF2C, G2E3, HESX1 
+PC_ 5 
+Positive:  TMSB4X, SFRP1, MTND1P23, PCLAF, S100A11, MTCO1P12, FAM162A, ID3, BNIP3, GAS5 
+	   TUBA1B, LDHA, CRABP2, DDIT4, PGK1, GAPDH, FTL, MIR205HG, DUSP6, HSPB1 
+	   CKS1B, APOC1, HMGB2, LINC01356, APOE, BST2, GSTP1, LINC00678, LINC01405, ENO1 
+Negative:  MT1G, MT1H, MT1E, L1TD1, NCL, MT1X, MT2A, MT1F, DNMT3B, SNHG14 
+	   LNCPRESS1, DDX21, VCAN, HSP90AA1, HELLS, AASS, VASH2, AKAP12, MAP1B, TTN 
+	   NNAT, TRIM71, SYNE2, NOP56, SEMA6A, JARID2, DST, PAK1IP1, PKIB, NODAL 
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  gene = col_character(),
+  chr = col_character(),
+  tss = col_double(),
+  end = col_double()
+)
+Parsed with column specification:
+cols(
+  .default = col_double(),
+  X1 = col_character()
+)
+See spec(...) for full column specifications.
+Performing log-normalization
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Centering and scaling data matrix
+  |                                                                              |                                                                      |   0%  |                                                                              |=====                                                                 |   7%  |                                                                              |=========                                                             |  13%  |                                                                              |==============                                                        |  20%  |                                                                              |===================                                                   |  27%  |                                                                              |=======================                                               |  33%  |                                                                              |============================                                          |  40%  |                                                                              |=================================                                     |  47%  |                                                                              |=====================================                                 |  53%  |                                                                              |==========================================                            |  60%  |                                                                              |===============================================                       |  67%  |                                                                              |===================================================                   |  73%  |                                                                              |========================================================              |  80%  |                                                                              |=============================================================         |  87%  |                                                                              |=================================================================     |  93%  |                                                                              |======================================================================| 100%
+PC_ 1 
+Positive:  LIX1, MYH6, HOXB-AS3, MYL4, TNNI1, HAND1, SLN, RCSD1, PDE11A, NPPA 
+	   HOXB7, ANKRD1, SOX6, ITGA8, NTRK2, PRELP, MYL7, ISL1, SLIT3, HOXB1 
+	   NPPB, BMP5, SNAI2, LRRN3, GUCY1A1, LMO2, TNNT2, MEIS1, RGS4, BMPER 
+Negative:  CENPF, TOP2A, MKI67, ARL6IP1, DLGAP5, CENPE, UBE2C, TPX2, AURKA, MIS18BP1 
+	   ASPM, CKS2, CCNB1, MAP1B, BUB1, HMMR, L1TD1, VCAN, TTK, NUCKS1 
+	   SGO2, CNTNAP2, CKAP2, JPT1, SMC4, SNHG14, SPDL1, PTTG1, DPPA4, TUBA1C 
+PC_ 2 
+Positive:  SLC2A3, DDIT4, TUBB2A, TUBB2B, LINC01405, TAGLN, ESRG, LINC02700, BEX2, SLC3A2 
+	   TPM1, SLC2A1, GDF15, ENO2, CDKN1A, VIM, STC2, MIR302CHG, DDIT3, DIAPH2 
+	   ATF5, CAVIN1, TRIB3, ANXA2, LINC00458, TAC1, PMEL, UPP1, MYL9, MTRNR2L1 
+Negative:  UBE2C, TOP2A, AURKA, MTRNR2L8, CKS2, HMMR, ARL6IP1, CCNB1, CENPF, DKK1 
+	   GABRB2, DLGAP5, MTCO1P12, IER3, PCSK1, MTND1P23, CENPE, ID3, MKI67, PTTG1 
+	   TPX2, LMO7, DEPDC1, ASPM, JPT1, CDK1, SNHG5, DKK4, PRAC1, CKAP2 
+PC_ 3 
+Positive:  TAGLN, CENPU, TPM1, SNHG5, CCND1, DIAPH2, ID1, MTATP6P1, ATF5, GPATCH4 
+	   L1TD1, HPGD, FST, SOX2, CRABP1, SLIRP, GAP43, PAK1IP1, POLR3G, EZR 
+	   LRRC75A, RARRES2, RGS5, NOP56, HSPD1, ANXA3, NEFL, RGS16, TAC1, TMSB4X 
+Negative:  LINC00458, LINC02700, TRDN, PCDH10, LINC01356, MTRNR2L1, SERPINE2, GAL, LDHA, BNIP3 
+	   QPCT, LGALS1, ENO2, PGK1, DKK4, SLC2A1, TUBB2B, FAM162A, EDNRB, STC1 
+	   NLRP2, PDK1, CEBPZOS, MIXL1, NUDT15, PGM1, SAT1, MTRNR2L12, TOP2A, CSMD1 
+PC_ 4 
+Positive:  TOP2A, TPX2, MKI67, AURKA, MALAT1, CENPE, UBE2C, CENPF, DEPDC1, ASPM 
+	   KIF23, FST, SGO2, DLGAP5, CDK1, PLK1, NDC80, KPNA2, HMMR, KIF14 
+	   TTK, CKAP2L, MAP1B, CCNB1, HJURP, KIF2C, CKS2, CKAP2, CDCA2, CDC20 
+Negative:  MTCO1P12, IFITM1, MTND1P23, PTMA, GSTP1, MIXL1, HSPE1, GAL, ID3, FOXD3-AS1 
+	   PRDX1, SLIRP, HSP90AB1, CRABP1, NPM1, DANCR, TXN, SAT1, VAMP8, PCSK1 
+	   HSPD1, C1QBP, SNHG5, PCNA, LINC01356, MTRNR2L8, PRAC1, GAPDH, HPGD, MT2A 
+PC_ 5 
+Positive:  DKK4, MIXL1, MALAT1, DKK1, NUCKS1, CDH2, DSP, AKAP12, NASP, SYNE2 
+	   NCL, HELLS, MAP1B, RSPO3, VCAN, HSP90AA1, DST, MTRNR2L1, CNTNAP2, HSP90AB1 
+	   L1TD1, SNHG14, CENPU, TBXT, CLSPN, PARP1, MTRNR2L12, PTPN13, SMC4, ODC1 
+Negative:  TMSB4X, CKS2, UBE2C, FTL, JPT1, GSTP1, KPNA2, AURKA, CDK1, PTTG1 
+	   CCNB1, PRDX1, CDCA8, ANXA3, CHCHD2, PLAAT3, ID2, MT2A, LINC00678, GAS5 
+	   GAPDH, HSPE1, TXN, C1QBP, MT1G, TUBA1C, CKS1B, LINC01405, IFITM1, NPM1 
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  gene = col_character(),
+  chr = col_character(),
+  tss = col_double(),
+  end = col_double()
+)
+Parsed with column specification:
+cols(
+  .default = col_double(),
+  X1 = col_character()
+)
+See spec(...) for full column specifications.
+Performing log-normalization
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Centering and scaling data matrix
+  |                                                                              |                                                                      |   0%  |                                                                              |=====                                                                 |   7%  |                                                                              |=========                                                             |  13%  |                                                                              |==============                                                        |  20%  |                                                                              |===================                                                   |  27%  |                                                                              |=======================                                               |  33%  |                                                                              |============================                                          |  40%  |                                                                              |=================================                                     |  47%  |                                                                              |=====================================                                 |  53%  |                                                                              |==========================================                            |  60%  |                                                                              |===============================================                       |  67%  |                                                                              |===================================================                   |  73%  |                                                                              |========================================================              |  80%  |                                                                              |=============================================================         |  87%  |                                                                              |=================================================================     |  93%  |                                                                              |======================================================================| 100%
+PC_ 1 
+Positive:  LINC01356, GAL, PMAIP1, EPCAM, SFRP2, L1TD1, ESRG, TUBB2B, IFITM1, TUBB2A 
+	   ID1, SEMA6A, CD9, UCHL1, DCLK1, LINC02700, TDGF1, DPPA4, TMSB4X, POU5F1 
+	   LINC00678, FOXD3-AS1, MIR302CHG, PTPRZ1, SCG3, NMRK2, PLAAT3, QPCT, CBR1, LINC00458 
+Negative:  VIM, HAPLN1, HAS2, HAND1, CDH11, CRABP2, LIX1, APLNR, BMP4, PRTG 
+	   KRT19, MEIS2, MSX1, COLEC12, MYL4, CCDC34, ALPK2, PMP22, RHOBTB3, GATA6-AS1 
+	   CADM1, FAM89A, FBN2, WNT5A, RGS5, TMEM88, CCBE1, SPARC, CGNL1, IRX3 
+PC_ 2 
+Positive:  GAL, MYH6, TNNI1, HSP90AB1, TNNT2, CER1, MIR302CHG, LINC01356, FTL, GATA6-AS1 
+	   EMC10, NRG1, MTRNR2L8, DKK4, HHEX, EPCAM, DLK1, ANGPT1, LINC00458, APOA2 
+	   SAMD11, STMN2, MIAT, FGFBP3, TECRL, CCKBR, FGF17, FEZ1, SORBS2, GYPB 
+Negative:  TOP2A, UBE2C, CENPF, TPX2, DLGAP5, MKI67, HMGB2, AURKA, ASPM, CCNB1 
+	   HMMR, CENPE, PTTG1, ARL6IP1, CKS2, BIRC5, SGO2, CDK1, DEPDC1, SMC4 
+	   TTK, KIF2C, CKAP2, NUF2, KPNA2, KIF23, NDC80, CDCA8, BUB1B, BUB1 
+PC_ 3 
+Positive:  RGS5, LIX1, KRT18, S100A10, RGS4, MYL4, CCBE1, TPM1, TMEM88, PMP22 
+	   CYB5A, CTSV, PKP2, HOXB-AS3, MYL7, KRT8, CD24, PRRX1, DUSP6, PRTG 
+	   NID2, ATF7IP2, ARL4C, ID2, BAMBI, GUCY1A1, PTPN13, TNC, RIPOR2, VIM 
+Negative:  CER1, LHX1, OTX2, MIXL1, NTS, APLNR, DKK1, ZIC3, BNIP3, ARL4D 
+	   SERPINE2, CYP26A1, TNFRSF11B, FAM24B, EOMES, PCDH19, ENC1, LZTS1, FOXC1, BMP2 
+	   CHGA, PLXNA2, MESP1, LIPG, IER3, NUCKS1, COL5A1, CXCR4, FGF17, TBX6 
+PC_ 4 
+Positive:  MTRNR2L1, COL1A2, SERPINE2, MIXL1, APOE, APLNR, TNNT1, FBN2, KRT19, HAS2 
+	   CDH2, CNTNAP2, ZIC3, APOC1, GJA1, SERPINB9, TRDN, SHISAL2B, TPM3, S100A11 
+	   SCD, OTX2, MTCO1P12, LHX1, COLEC12, HELLS, SPARC, MIR302CHG, NES, RHOBTB3 
+Negative:  TOP2A, UBE2C, PTTG1, HMMR, AURKA, TPX2, CCNB1, DLGAP5, HMGB2, CKS2 
+	   DEPDC1, MKI67, CENPF, BIRC5, KPNA2, CDCA8, NDC80, CDC20, PIF1, KIF2C 
+	   PLK1, CENPE, ARL6IP1, KIF23, NUF2, CDK1, ASPM, SGO2, GTSE1, BUB1 
+PC_ 5 
+Positive:  NTS, HSP90AB1, CDH11, APLNR, HAND1, CRABP2, TUBB2B, SERPINE2, WNT5A, NASP 
+	   HSPD1, WNT8A, ENO1, NCL, NPM1, GAS5, MSGN1, TBX6, RSPO3, PTMA 
+	   PCDH19, MEST, SNAI2, PCNA, S100A11, TUBB2A, BMP4, PGK1, LDHA, NOP56 
+Negative:  FAM184A, CCKBR, SOX17, TNNT2, MYH6, MOBP, FOXA2, TNNI1, LINC00261, EMC10 
+	   PRDM1, GPC4, DKK4, FGF17, OTX2, STMN2, APOA2, MGST2, CYP26A1, ARHGAP24 
+	   CER1, SFRP1, NEBL, PPFIBP2, MYL7, ACTC1, MIR302CHG, CEP55, EPCAM, TDGF1 
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  gene = col_character(),
+  chr = col_character(),
+  tss = col_double(),
+  end = col_double()
+)
+Parsed with column specification:
+cols(
+  X1 = col_character(),
+  X2 = col_double(),
+  X3 = col_double(),
+  X4 = col_double(),
+  X5 = col_double(),
+  X6 = col_double(),
+  X7 = col_double(),
+  X8 = col_double(),
+  X9 = col_double(),
+  X10 = col_double(),
+  X11 = col_double(),
+  X12 = col_double(),
+  X13 = col_double(),
+  X14 = col_double(),
+  X15 = col_double(),
+  X16 = col_double(),
+  X17 = col_double(),
+  X18 = col_double()
+)
+Performing log-normalization
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Centering and scaling data matrix
+  |                                                                              |                                                                      |   0%  |                                                                              |=====                                                                 |   7%  |                                                                              |==========                                                            |  14%  |                                                                              |===============                                                       |  21%  |                                                                              |====================                                                  |  29%  |                                                                              |=========================                                             |  36%  |                                                                              |==============================                                        |  43%  |                                                                              |===================================                                   |  50%  |                                                                              |========================================                              |  57%  |                                                                              |=============================================                         |  64%  |                                                                              |==================================================                    |  71%  |                                                                              |=======================================================               |  79%  |                                                                              |============================================================          |  86%  |                                                                              |=================================================================     |  93%  |                                                                              |======================================================================| 100%
+PC_ 1 
+Positive:  VIM, MALAT1, LIX1, GATA6-AS1, TMEM88, TPM1, HAND1, NID2, RGS4, COL1A1 
+	   PDGFRA, GUCY1A1, LUM, COL1A2, MYL7, KIFAP3, MEIS2, COL3A1, PRRX1, HAPLN1 
+	   AKAP12, H19, HAND2, LINC02381, MAB21L2, RHOBTB3, HOXB2, CSRP2, BMP5, SYT10 
+Negative:  MIR302CHG, EPCAM, TDGF1, ID1, PMAIP1, PCAT14, ADM, CALM1, UCHL1, SFRP2 
+	   TMSB4X, SOX2, HSP90AA1, TUBA1B, APELA, TPM3, CKB, TUBA1C, LINC01356, TPX2 
+	   ESRG, S100A14, L1TD1, DLGAP5, CENPF, TOP2A, HMGB2, NASP, CKS2, TDGF1P3 
+PC_ 2 
+Positive:  MIR302CHG, EPCAM, PCAT14, TDGF1, S100A14, ADM, APELA, ID1, APOA1, FAM184A 
+	   LINC01356, GATA3, FOXA2, S100A16, LINC00261, CCND1, SOX2, PPFIBP2, CLDN7, TMSB4X 
+	   SFRP2, ESRG, CST1, MIR205HG, CST4, POU5F1, HHEX, FTL, PEG10, APOA2 
+Negative:  TOP2A, UBE2C, ASPM, MKI67, CENPF, AURKA, TPX2, DLGAP5, HMGB2, NUF2 
+	   CCNB1, CENPE, KIF2C, SGO2, ARL6IP1, PTTG1, HMMR, DEPDC1, TTK, NDC80 
+	   SMC4, CDK1, KIF14, GTSE1, CDCA8, KIF23, CKAP2, CCNA2, KPNA2, BUB1 
+PC_ 3 
+Positive:  S100A14, ANKRD1, FAM184A, GATA3, PCAT14, SLC2A3, PPFIBP2, BMP2, TTN, RGS5 
+	   S100A16, APOA1, FGD6, VCAN, KRT19, IFI16, SERPINE2, CCKBR, LINC00261, KRT8 
+	   FOXA2, S100A13, S100A10, CDH2, PEG10, PTPN13, CST1, ISL1, COL4A1, KRT18 
+Negative:  SOX2, SFRP2, ESRG, POU5F1, TMSB4X, FOXD3-AS1, PTTG1, CCNB1, UBE2C, RARRES2 
+	   TPX2, CKS2, DCLK1, TOP2A, NPM1, BIRC5, POLR3G, POU5F1B, SCGB3A2, KPNA2 
+	   NMU, DLGAP5, SCG3, PTPRZ1, HMMR, PTMA, HMGB2, AURKA, BEX2, NAP1L3 
+PC_ 4 
+Positive:  HAS2, HAPLN1, CRABP2, LINC00458, CADM1, FGF10, GYPB, JAG1, TTN, CNTNAP2 
+	   APLNR, LRRTM1, CFC1, EMC10, BMPER, ART5, SAMD3, COL6A4P2, GYPE, DGKI 
+	   NKX3-1, CYP1B1, FBN2, SPOCK3, TGFB2, MOK, ENC1, MAP1B, NR0B1, NRP2 
+Negative:  LUM, COL3A1, S100A10, MAB21L2, IGFBP3, PRRX1, H19, SLC9A3R1, CALD1, HAND1 
+	   AKAP12, XIST, KRT18, LINC02381, HOXB-AS3, MEST, RGS5, SOX6, HOXB6, ID2 
+	   PDE3A, CD24, GPC3, TPM1, DAB2, BNC2, GUCY1A1, COBLL1, ANXA3, RSPO3 
+PC_ 5 
+Positive:  TOP2A, S100A14, UBE2C, GATA3, NEK2, LINC00261, APOA1, FAM184A, FOXA2, AURKA 
+	   NUF2, DLGAP5, ASPM, CENPF, ARL6IP1, PPFIBP2, DEPDC1, SGO2, CCNB1, HMMR 
+	   HHEX, SYTL5, DLK1, CENPE, CDK1, MKI67, TPX2, PTTG1, GTSE1, PIF1 
+Negative:  L1TD1, ESRG, CCND2, SFRP2, SOX2, TPM1, FOXD3-AS1, UGP2, TERF1, POU5F1 
+	   PMAIP1, DPPA4, PTPRZ1, DIAPH2, TAGLN, SLC7A3, VCL, DCLK1, AKAP12, INPP5F 
+	   USP9X, CSRP2, MYL7, PRDX1, UCHL1, HSP90AB1, NAP1L3, PCNA, MYL4, NES 
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  gene = col_character(),
+  chr = col_character(),
+  tss = col_double(),
+  end = col_double()
+)
+Parsed with column specification:
+cols(
+  .default = col_double(),
+  X1 = col_character()
+)
+See spec(...) for full column specifications.
+Performing log-normalization
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Centering and scaling data matrix
+  |                                                                              |                                                                      |   0%  |                                                                              |=====                                                                 |   7%  |                                                                              |=========                                                             |  13%  |                                                                              |==============                                                        |  20%  |                                                                              |===================                                                   |  27%  |                                                                              |=======================                                               |  33%  |                                                                              |============================                                          |  40%  |                                                                              |=================================                                     |  47%  |                                                                              |=====================================                                 |  53%  |                                                                              |==========================================                            |  60%  |                                                                              |===============================================                       |  67%  |                                                                              |===================================================                   |  73%  |                                                                              |========================================================              |  80%  |                                                                              |=============================================================         |  87%  |                                                                              |=================================================================     |  93%  |                                                                              |======================================================================| 100%
+PC_ 1 
+Positive:  LUM, COL3A1, S100A10, DCN, COL1A2, SPARC, FTL, MARCKS, MEST, CALM1 
+	   SLC9A3R1, FRZB, HAND1, MAB21L2, COBLL1, H19, BST2, KRT19, EZR, DSC2 
+	   PTMA, GAS5, ANXA2, LINC02381, IGFBP3, IGFBP5, ANXA1, ARID5B, SERPINB9, STK26 
+Negative:  MYH6, EMC10, ACTC1, MYL4, TTN, TNNT2, NEBL, MYL7, TRIM55, TNNI1 
+	   SMPX, MYL3, DGKI, NEXN, TNNC1, SLC8A1, PPP1R12B, FILIP1, MYOCD, CMYA5 
+	   MEF2C, PLN, HRC, TRDN, SORBS2, ACTN2, PDLIM5, ANKRD1, ACTA2, PRDX1 
+PC_ 2 
+Positive:  EPCAM, MIR302CHG, CENPF, PCAT14, TTR, TOP2A, HMGB2, APELA, HHEX, FN1 
+	   TUBA1B, SMC4, TPX2, DLGAP5, HELLS, CKB, CKS2, LINC00261, PTMA, MKI67 
+	   FAM184A, GATA3, UBE2C, ADM, ID3, ASPM, APOA2, S100A14, ARL6IP1, NUF2 
+Negative:  COL3A1, LUM, COL1A2, DCN, SPARC, HAND1, VIM, TPM1, S100A10, MAB21L2 
+	   H19, SLC9A3R1, EZR, COBLL1, MEST, BST2, FRZB, ARID5B, COL1A1, DSC2 
+	   SERPINB9, PLAT, SLN, LINC02381, SOX6, AKAP12, ANXA1, CSRP2, MALAT1, CPE 
+PC_ 3 
+Positive:  TOP2A, CENPF, UBE2C, MKI67, TPX2, HMGB2, ASPM, DLGAP5, CCNB1, PTTG1 
+	   CENPE, CDK1, HMMR, NUF2, CKAP2, AURKA, SGO2, SMC4, BIRC5, TTK 
+	   NDC80, DEPDC1, KIF23, KPNA2, KIF14, KIF2C, GTSE1, ARL6IP1, CCNA2, CDCA8 
+Negative:  APOA2, TTR, EPCAM, APOA1, S100A14, APELA, LINC00261, APOC1, HHEX, PCAT14 
+	   APOB, FGB, GATA3, FOXA2, MTTP, FN1, MIR302CHG, VIL1, NPY, APOM 
+	   CLDN7, SERPINE2, FTL, CGN, LINC01356, TBX3, FAM184A, S100A16, SMLR1, RIPPLY3 
+PC_ 4 
+Positive:  SFRP1, SIX1, SOX2, SFRP2, NMU, LIX1, SPOCK3, NR2F1, HOTAIRM1, CRABP1 
+	   CRABP2, PTPRZ1, NRG1, COL2A1, TMSB4X, PTN, PCOLCE, CENPF, HMGB2, NEFM 
+	   FEZ1, PMEL, ZIC2, DCX, FOXC2, SYT6, IRX3, TOP2A, RBP1, ALX1 
+Negative:  KRT19, TTR, S100A14, APOA1, APOA2, S100A10, ANXA2, APELA, EPCAM, APOB 
+	   LINC00261, APOE, PCAT14, EZR, GATA3, SYTL5, RGS5, EPSTI1, HHEX, KRT8 
+	   SLC2A3, FGD6, SERPINE2, FAM184A, PPFIBP2, TBX3, ANKRD1, FOXA2, IGFBP3, KRT18 
+PC_ 5 
+Positive:  SOX2, MIR302CHG, SFRP2, L1TD1, PTPRZ1, PMAIP1, FEZ1, POLR3G, TMSB4X, DPPA4 
+	   RARRES2, USP44, UCHL1, ESRG, ZIC2, DLGAP1-AS2, ADM, POU5F1, HESX1, TFAP2A 
+	   CYP26A1, MGST1, MIAT, OTX2, TERF1, PSAT1, PCNA, NOP56, C1QBP, PODXL 
+Negative:  MALAT1, FN1, TTR, APOA2, HHEX, LINC00261, TOP2A, ASPM, ARL6IP1, DLK1 
+	   NPY, IFI16, APOA1, APOB, FOXA2, KIF14, NUF2, NEK2, CENPE, MKI67 
+	   MTTP, FGB, APELA, SGO2, UBE2C, TBX3, CCNB1, CCDC34, RHOBTB3, CENPF 
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  gene = col_character(),
+  chr = col_character(),
+  tss = col_double(),
+  end = col_double()
+)
+Parsed with column specification:
+cols(
+  .default = col_double(),
+  X1 = col_character()
+)
+See spec(...) for full column specifications.
+Performing log-normalization
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Centering and scaling data matrix
+  |                                                                              |                                                                      |   0%  |                                                                              |=====                                                                 |   7%  |                                                                              |=========                                                             |  13%  |                                                                              |==============                                                        |  20%  |                                                                              |===================                                                   |  27%  |                                                                              |=======================                                               |  33%  |                                                                              |============================                                          |  40%  |                                                                              |=================================                                     |  47%  |                                                                              |=====================================                                 |  53%  |                                                                              |==========================================                            |  60%  |                                                                              |===============================================                       |  67%  |                                                                              |===================================================                   |  73%  |                                                                              |========================================================              |  80%  |                                                                              |=============================================================         |  87%  |                                                                              |=================================================================     |  93%  |                                                                              |======================================================================| 100%
+PC_ 1 
+Positive:  MYH6, MYL4, EMC10, TTN, ACTC1, NEBL, TNNT2, SMPX, MYL7, MYL3 
+	   NEXN, TNNC1, ACTN2, PLN, TNNI1, TRIM55, ANKRD1, NPPA, SLC8A1, PPP1R12B 
+	   SORBS2, FILIP1, SYNPO2L, PDLIM5, MYBPC3, TRDN, MYOM1, CSRP3, HRC, LDB3 
+Negative:  DCN, COL3A1, LUM, SPARC, S100A10, FRZB, SLC9A3R1, HAND1, COL1A2, NPNT 
+	   FTL, STK26, MEST, COBLL1, PODXL, EZR, KRT19, MARCKS, SOX6, TNNT1 
+	   PITX2, H19, IGFBP5, HMGB2, MAB21L2, PTMA, LINC02381, ANXA2, APOE, DSC2 
+PC_ 2 
+Positive:  CENPF, TOP2A, TPX2, UBE2C, MKI67, DLGAP5, HMGB2, CCNB1, BIRC5, ASPM 
+	   SMC4, TUBA1B, ARL6IP1, NUF2, NDC80, CENPE, CDCA8, PTTG1, CKS2, HMMR 
+	   CKAP2, CCNA2, TTK, CENPU, AURKA, KIF2C, CDK1, GTSE1, BUB1, CDC20 
+Negative:  DCN, COL3A1, LUM, COL1A2, SPARC, EZR, S100A10, NPNT, FRZB, SLC9A3R1 
+	   CSRP2, COBLL1, HAND1, TPM1, PODXL, SOX6, SERPINB9, MALAT1, ARHGEF3, DSP 
+	   COL1A1, PRSS35, SLC40A1, PITX2, LBH, H19, CTSL, MAB21L2, RSRP1, ARID5B 
+PC_ 3 
+Positive:  TPM1, CSRP2, TAGLN, CAVIN1, KRT18, EZR, ANXA2, CALD1, PRSS35, KRT8 
+	   S100A10, ANXA1, MYL9, DIAPH3, ACTA2, LUM, UBE2C, TPM2, MKI67, TUBA1B 
+	   AKAP12, SPARC, TOP2A, CDK1, DCN, ACTN1, FRZB, ANKRD1, TPX2, KPNA2 
+Negative:  APOA2, FGB, APOA1, AFP, APOB, TTR, SERPINA1, GSTA2, S100A14, EPCAM 
+	   APOC1, SMLR1, MTTP, RBP4, SFRP1, FGA, DLK1, LINC00261, APOM, GSTA1 
+	   GPC3, CRABP1, AKR1D1, HPX, VIL1, HHEX, SOX2, FGG, AQP3, ZBTB16 
+PC_ 4 
+Positive:  TOP2A, SFRP1, HMGB2, PTN, CENPF, MKI67, TPX2, UBE2C, CKAP2, ASPM 
+	   DLGAP5, LIX1, NDC80, PTMA, CENPE, CRABP1, SMC4, BIRC5, NUF2, KIF2C 
+	   KIF4A, PTTG1, TNNI1, SGO2, TTK, TECRL, KIF11, MIS18BP1, HMMR, CDCA8 
+Negative:  APOA2, FGB, AFP, APOA1, S100A14, GSTA2, APOB, TTR, APOC1, SERPINA1 
+	   EPCAM, RBP4, ANXA2, MTTP, SMLR1, FGA, SLC2A3, CALD1, GSTA1, TAGLN 
+	   APOM, VIL1, LINC00261, ANXA3, FTL, EPSTI1, S100A10, KRT19, S100A16, AKR1D1 
+PC_ 5 
+Positive:  MYL3, FGB, APOA2, MYH6, DCN, FRZB, TNNC1, AFP, APOA1, APOB 
+	   SERPINA1, GSTA2, TRDN, NPNT, SMPX, APOC1, TCEA3, PODXL, S100A14, ACTN2 
+	   TTR, APOE, NPPA, EMC10, MYBPC3, SLC9A3R1, MYL4, SMLR1, MYOM1, LDB3 
+Negative:  TMSB4X, TAGLN, SFRP1, CRABP2, PDLIM3, PLK2, LIMA1, VCL, PRSS23, ACTN1 
+	   MAP1B, VIM, EDN1, FN1, FHL1, CDH11, CALD1, GADD45A, JUN, CCN2 
+	   SERPINE2, TNC, COL8A1, ITGA1, TGFB2, CADM1, PHLDA1, ACSM3, ACTA2, TUBA1A 
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  gene = col_character(),
+  chr = col_character(),
+  tss = col_double(),
+  end = col_double()
+)
+Parsed with column specification:
+cols(
+  X1 = col_character(),
+  X2 = col_double(),
+  X3 = col_double(),
+  X4 = col_double(),
+  X5 = col_double(),
+  X6 = col_double(),
+  X7 = col_double(),
+  X8 = col_double(),
+  X9 = col_double(),
+  X10 = col_double(),
+  X11 = col_double(),
+  X12 = col_double(),
+  X13 = col_double(),
+  X14 = col_double(),
+  X15 = col_double(),
+  X16 = col_double(),
+  X17 = col_double(),
+  X18 = col_double(),
+  X19 = col_double()
+)
+Performing log-normalization
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Centering and scaling data matrix
+  |                                                                              |                                                                      |   0%  |                                                                              |=====                                                                 |   8%  |                                                                              |===========                                                           |  15%  |                                                                              |================                                                      |  23%  |                                                                              |======================                                                |  31%  |                                                                              |===========================                                           |  38%  |                                                                              |================================                                      |  46%  |                                                                              |======================================                                |  54%  |                                                                              |===========================================                           |  62%  |                                                                              |================================================                      |  69%  |                                                                              |======================================================                |  77%  |                                                                              |===========================================================           |  85%  |                                                                              |=================================================================     |  92%  |                                                                              |======================================================================| 100%
+PC_ 1 
+Positive:  DCN, LUM, COL3A1, FRZB, SLC9A3R1, NPNT, SPARC, IGFBP5, PODXL, PTMA 
+	   HAND1, HMGB2, PTN, PITX2, LINC02381, MME, SOX6, TOP2A, COL1A2, STK26 
+	   COBLL1, LRRN3, MKI67, MEST, OGFRL1, CENPF, PCLAF, NPM1, SFRP2, FTL 
+Negative:  MYL4, ACTC1, MYL7, ANKRD1, TTN, TNNT2, PLN, SMPX, ACTN2, NEBL 
+	   NEXN, EMC10, NPPA, MYH6, MYOZ2, CSRP3, SORBS2, TRIM55, SYNPO2L, FILIP1 
+	   TNNC1, MYOM1, SLC8A1, MYL3, NPPB, CRYAB, MYH7, PDLIM5, TNNI1, HSPB1 
+PC_ 2 
+Positive:  TOP2A, CENPF, UBE2C, TPX2, MKI67, HMGB2, ASPM, DLGAP5, SMC4, NDC80 
+	   PTTG1, CDK1, TUBA1B, CCNB1, KIF23, BIRC5, CENPE, GTSE1, CDCA8, NUF2 
+	   TTK, CCNA2, KIF2C, HMMR, AURKA, CKAP2, KIF11, KIF4A, DEPDC1, SGO2 
+Negative:  COL3A1, COL1A2, BST2, SELENOP, MFAP4, TGFBI, RSPO3, DCN, CXCL12, TGFBR3 
+	   KCNQ1OT1, ARHGEF3, PLAGL1, ROBO2, PLAT, ITGA8, FTL, SPARC, MALAT1, LBH 
+	   PLK2, LUM, SHISA3, H19, SERPINB9, SFRP2, GABRA2, PDGFRA, ADAMTS6, PDZRN4 
+PC_ 3 
+Positive:  TAGLN, CALD1, TMSB4X, ACTN1, ACTA2, SERPINE2, VIM, ACTG2, CCN2, S100A11 
+	   ANXA1, TPM2, FN1, RAI14, VCL, PRSS23, INHBA, LIMA1, ITGA1, EDN1 
+	   KLF6, IGFBP7, FHL1, CCN1, CDH11, PLK2, MAP1B, CDKN2B, COL4A1, FILIP1L 
+Negative:  MYL3, MYH6, EMC10, ACTN2, MYH7, TNNC1, NEBL, SMPX, NPPA, CSRP3 
+	   MYL4, MYBPC3, TRIM55, TNNI1, TRDN, MYOM1, TTN, HRC, LDB3, CRYAB 
+	   TCEA3, TNNT2, ACTC1, EZR, PPP1R12B, TECRL, SORBS2, RSRP1, HSPB3, POPDC2 
+PC_ 4 
+Positive:  DCN, LUM, EZR, S100A10, FRZB, PRSS35, NPNT, CSRP2, SLC9A3R1, ANXA2 
+	   SPARC, HAND1, MME, COBLL1, PODXL, TPM1, KRT18, OGFRL1, CAVIN1, KRT8 
+	   PITX2, IL6ST, SOX6, COL3A1, TNNT2, H19, COL1A2, STK26, KDR, TNNI1 
+Negative:  SFRP1, CRABP1, FN1, DLK1, SERPINA1, GPC3, PRTG, ID3, EPCAM, DUSP6 
+	   SERPINA5, FGB, RBP1, NEFM, SPX, APOA2, MECOM, TMSB4X, EDN1, SOX11 
+	   APOA1, NR2F1, SOX2, AMBP, MIR205HG, SPINK1, MAP2, CADM1, PRSS23, LRRN1 
+PC_ 5 
+Positive:  SERPINA1, AFP, APOA1, FGB, APOA2, SERPINA5, KRT18, SPINK1, S100A10, AMBP 
+	   TTR, EPCAM, KRT8, ANXA2, EZR, ONECUT1, KRT19, MGST1, CLDN1, VTN 
+	   ANXA3, APOC1, CALB2, PLAC9, TNNT1, ALDH1A1, LRP2, PODXL, COBLL1, CLU 
+Negative:  SFRP1, VCAN, COL3A1, CXCL12, LBH, COL1A2, NCAM1, TGFBI, MFAP4, MEIS2 
+	   BST2, EDNRA, ITGA8, SHISA3, PTN, MALAT1, CADM1, CDH11, GUCY1A1, ANGPT1 
+	   HAS2, COL25A1, TGFBR3, PLAGL1, MLLT3, PDGFRA, CRABP2, DNM3OS, RHOBTB3, VIM 
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  gene = col_character(),
+  chr = col_character(),
+  tss = col_double(),
+  end = col_double()
+)
+Parsed with column specification:
+cols(
+  .default = col_double(),
+  X1 = col_character()
+)
+See spec(...) for full column specifications.
+Performing log-normalization
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Centering and scaling data matrix
+  |                                                                              |                                                                      |   0%  |                                                                              |====                                                                  |   6%  |                                                                              |=========                                                             |  12%  |                                                                              |=============                                                         |  19%  |                                                                              |==================                                                    |  25%  |                                                                              |======================                                                |  31%  |                                                                              |==========================                                            |  38%  |                                                                              |===============================                                       |  44%  |                                                                              |===================================                                   |  50%  |                                                                              |=======================================                               |  56%  |                                                                              |============================================                          |  62%  |                                                                              |================================================                      |  69%  |                                                                              |====================================================                  |  75%  |                                                                              |=========================================================             |  81%  |                                                                              |=============================================================         |  88%  |                                                                              |==================================================================    |  94%  |                                                                              |======================================================================| 100%
+PC_ 1 
+Positive:  CENPF, SNHG14, MKI67, TOP2A, DLGAP5, TERF1, CCNB1, UBE2C, ASPM, CKS2 
+	   KPNA2, BUB1B, HMMR, JARID2, ARL6IP1, MTATP6P1, DPPA4, AURKA, TUBA1C, JPT1 
+	   TKT, PTTG1, TPX2, VCAN, MIS18BP1, HMGB3, THY1, TTK, FDFT1, ESRG 
+Negative:  PRTG, CYP26A1, MYL7, TFAP2A, MEIS2, WLS, LIX1, MYL4, SP5, GAD1 
+	   EOMES, TNNT2, APOA2, APOA1, TTR, ANKRD1, MYH6, NEBL, TNNI1, LGI1 
+	   DLK1, NPPA, MYL3, HAND1, TNNC1, SAMD11, TTC29, PLN, DCN, LHX5-AS1 
+PC_ 2 
+Positive:  MALAT1, SFRP1, USP9X, TPM1, GPC3, CENPF, AASS, OTX2, ASPM, CENPE 
+	   TOP2A, BST2, BEX2, TPX2, LINC01356, PRTG, CCDC160, PODXL, BUB1, ADM 
+	   LINC01405, TNNT1, MKI67, SOX2, MYL9, KIF14, VIM, DST, ID4, LRRN1 
+Negative:  MT2A, MT1X, MT1G, MT1E, PTMA, TERF1, GSTP1, MT1F, CRABP1, KRT18 
+	   HSPD1, NPM1, HSPE1, NEFL, SIX6, GAPDH, VSNL1, PRAC1, CALM1, HMGCS1 
+	   PRDX1, IER3, S100A10, POLR3G, HSP90AB1, PEBP1, MT1H, RRM2, DANCR, HSP90AA1 
+PC_ 3 
+Positive:  TOP2A, UBE2C, AURKA, BNIP3, ID2, CDK1, MKI67, TPX2, DEPDC1, DLGAP5 
+	   MALAT1, KIF2C, SIX6, SGO2, KIF23, KPNA2, CKS2, PDGFA, CCNB1, CENPE 
+	   HMGB2, HMMR, NEFL, CENPF, CKAP2L, NUF2, ARL6IP1, DSP, CDCA8, PIF1 
+Negative:  RPL22L1, MIR302CHG, BEX1, SLIRP, TRDN, TPM1, MTRNR2L1, BEX2, TPM3, TAGLN 
+	   GAL, LINC00458, S100A11, DANCR, LINC02700, NOP56, FTL, MYL7, ACAT2, EMC10 
+	   TCEAL5, GPATCH4, SNHG3, NLRP2, UCHL1, S100A6, L1TD1, PAK1IP1, PCLAF, DDX21 
+PC_ 4 
+Positive:  UBE2C, AURKA, TOP2A, CKS2, L1TD1, CCNB1, KPNA2, TPX2, HMMR, RPL22L1 
+	   TRDN, DLGAP5, CENPF, KIF23, CDK1, DEPDC1, PTTG1, CENPE, LINC00458, HJURP 
+	   CDC20, TTK, SGO2, THY1, AURKB, CDCA8, MKI67, BUB1, PLK1, NDC80 
+Negative:  ID2, ID1, BNIP3, MIR205HG, TMSB4X, VIM, CRABP2, DSP, GPC3, SELENOP 
+	   PRTG, TXNIP, MALAT1, CRABP1, NEFL, SERPINB9, CCND1, PCAT14, SYT6, TTC3 
+	   SAT1, CYP26A1, OTX2, FEZ1, ADM, CKB, LRRC75A, FST, NMU, PCNA 
+PC_ 5 
+Positive:  MT1G, MT1H, AASS, SNHG14, MT1E, VCAN, DST, MT1X, MT2A, MT1F 
+	   TTN, SYNE2, VASH2, MALAT1, AKAP12, ESRG, USP9X, HELLS, L1TD1, JARID2 
+	   TRIM71, NCL, HSP90AA1, MAP1B, UGP2, DNMT3B, INPP5F, RAI14, PLAAT3, SEMA6A 
+Negative:  ID3, PCLAF, TMSB4X, TUBA1B, SFRP1, MTND1P23, GAPDH, CKS1B, HSPE1, S100A11 
+	   APOC1, HMGB2, TXN, HMGB1P5, CKS2, RAN, GAS5, CRABP2, DUSP6, FTL 
+	   MTCO1P12, C1QBP, BST2, PTTG1, GPC3, SNHG3, HSPB1, UBE2C, MGST1, AFP 
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  gene = col_character(),
+  chr = col_character(),
+  tss = col_double(),
+  end = col_double()
+)
+Parsed with column specification:
+cols(
+  .default = col_double(),
+  X1 = col_character()
+)
+See spec(...) for full column specifications.
+Performing log-normalization
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Centering and scaling data matrix
+  |                                                                              |                                                                      |   0%  |                                                                              |====                                                                  |   6%  |                                                                              |=========                                                             |  12%  |                                                                              |=============                                                         |  19%  |                                                                              |==================                                                    |  25%  |                                                                              |======================                                                |  31%  |                                                                              |==========================                                            |  38%  |                                                                              |===============================                                       |  44%  |                                                                              |===================================                                   |  50%  |                                                                              |=======================================                               |  56%  |                                                                              |============================================                          |  62%  |                                                                              |================================================                      |  69%  |                                                                              |====================================================                  |  75%  |                                                                              |=========================================================             |  81%  |                                                                              |=============================================================         |  88%  |                                                                              |==================================================================    |  94%  |                                                                              |======================================================================| 100%
+PC_ 1 
+Positive:  CENPF, TOP2A, DLGAP5, MKI67, UBE2C, TPX2, CKS2, ARL6IP1, CENPE, AURKA 
+	   CCNB1, HMMR, MAP1B, MIS18BP1, ASPM, JPT1, BUB1, PTTG1, TTK, SGO2 
+	   CKAP2, DDX21, TPM3, SMC4, BUB1B, UCHL1, KPNA2, TUBA1C, ALDH3A2, VCAN 
+Negative:  WNT8A, CYP26A1, COL13A1, SAMD3, APLNR, PPIAP46, SAMD11, TCEA3, SELENOP, NR0B1 
+	   TNC, TBX6, MESP1, SNAI2, ANKRD1, HAND1, LHFPL6, MYH6, MYL4, TNNI1 
+	   MYL7, LIX1, SLITRK6, TTN, MEIS2, MSGN1, HOXB-AS3, GATA3, GATA6-AS1, SYT4 
+PC_ 2 
+Positive:  SLIRP, HSP90AA1, GSTP1, JPT1, UCHL1, TPM3, RBP1, CKS2, PRDX1, NEFL 
+	   PTMA, PCSK1, C1QBP, MTRNR2L8, PEBP1, DDX21, NCL, PSAT1, PAK1IP1, DLGAP5 
+	   POLR3G, CALM1, PTTG1, HMMR, CENPF, MAP1B, AURKA, NODAL, SNHG5, CCNB1 
+Negative:  SERPINE2, LINC01356, PCDH10, LINC00458, GAL, KRT19, LINC02700, TUBB2B, WNT8A, PGM1 
+	   TNNT1, TRDN, QPCT, CNTNAP2, EDNRB, SELENOP, MALAT1, PPIAP46, ID1, PGK1 
+	   CYP26A1, SLIT2, LDHA, SPATA16, BNIP3, TUBB2A, NLGN4X, DMD, BST2, COL13A1 
+PC_ 3 
+Positive:  TOP2A, UBE2C, AURKA, HMMR, MKI67, CENPE, CCNB1, CENPF, TPX2, DLGAP5 
+	   CKS2, DEPDC1, ARL6IP1, CDK1, ASPM, SGO2, PTTG1, KIF23, PLK1, DKK1 
+	   BUB1, KIF2C, G2E3, CDCA8, DKK4, NDC80, NUF2, HJURP, CKAP2, KIF14 
+Negative:  TAGLN, TPM1, SLC3A2, TMSB4X, CALD1, MIR302CHG, ANXA3, ATF5, DIAPH2, SLC2A3 
+	   LINC01405, UPP1, CHAC1, UGP2, PSAT1, GDF15, DDIT4, PLAAT3, TUBB2A, DDIT3 
+	   MTHFD2, MYL9, TAC1, ESRG, RGS5, STC2, TRIB3, CAVIN1, NMRK2, PODXL 
+PC_ 4 
+Positive:  MALAT1, ID1, WNT8A, CENPU, TPM1, FST, SERPINB9, SELENOP, CCDC160, CCND1 
+	   LRRC75A, ID2, IER3, DIAPH2, CENPF, APLNR, HES1, ZIC3, ID3, BST2 
+	   CITED2, DSP, TAGLN, GPM6A, SOX2, KLHL4, L1TD1, SNHG5, SLIT2, WLS 
+Negative:  LINC00458, LINC02700, FAM162A, NUDT15, MIXL1, S100A10, DKK4, PEBP1, TRDN, LDHA 
+	   GSTO1, CEBPZOS, MTRNR2L1, ERVH48-1, SAT1, ENO2, NLRP2, ACSL4, IFITM1, BNIP3 
+	   HSP90AB1, PGK1, STC1, SFRP2, LINC00678, LGALS1, GAL, SLC2A1, FDFT1, MTRNR2L12 
+PC_ 5 
+Positive:  MTCO1P12, MTND1P23, ID3, MTRNR2L8, IER3, SNHG5, HSPE1, IFITM1, CRABP1, VAMP8 
+	   PRAC1, MIXL1, HSPD1, PCSK1, MTATP6P1, CNTNAP2, GAL, HPGD, FOXD3-AS1, NPM1 
+	   GABRB2, GSTP1, FGF4, PTMA, S100A11, C1QBP, MTND4P12, SHISAL2B, PCNA, GDF3 
+Negative:  TOP2A, TPX2, UBE2C, AURKA, MKI67, PLK1, BEX2, DEPDC1, KIF23, CENPE 
+	   SLC2A3, CDK1, SGO2, KPNA2, CDC20, PSRC1, DLGAP5, KIF2C, NDC80, CKAP2L 
+	   CENPF, TUBB2B, HMGB2, HJURP, VIM, DDIT4, ESRG, LINC01405, KIF14, FST 
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  gene = col_character(),
+  chr = col_character(),
+  tss = col_double(),
+  end = col_double()
+)
+Parsed with column specification:
+cols(
+  X1 = col_character(),
+  X2 = col_double(),
+  X3 = col_double(),
+  X4 = col_double(),
+  X5 = col_double(),
+  X6 = col_double(),
+  X7 = col_double(),
+  X8 = col_double(),
+  X9 = col_double(),
+  X10 = col_double(),
+  X11 = col_double(),
+  X12 = col_double(),
+  X13 = col_double(),
+  X14 = col_double(),
+  X15 = col_double(),
+  X16 = col_double()
+)
+Performing log-normalization
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Centering and scaling data matrix
+  |                                                                              |                                                                      |   0%  |                                                                              |======                                                                |   8%  |                                                                              |============                                                          |  17%  |                                                                              |==================                                                    |  25%  |                                                                              |=======================                                               |  33%  |                                                                              |=============================                                         |  42%  |                                                                              |===================================                                   |  50%  |                                                                              |=========================================                             |  58%  |                                                                              |===============================================                       |  67%  |                                                                              |====================================================                  |  75%  |                                                                              |==========================================================            |  83%  |                                                                              |================================================================      |  92%  |                                                                              |======================================================================| 100%
+PC_ 1 
+Positive:  HMGB2, CENPF, TOP2A, SMC4, NUCKS1, TUBA1B, MKI67, TDGF1, DLGAP5, UBE2C 
+	   ASPM, TPX2, NUF2, CDK1, NASP, FAM184A, MIR302CHG, HMMR, CENPU, CKS1B 
+	   TTK, PTTG1, MIS18BP1, SGO2, CENPE, KIF20B, CKS2, PSIP1, HELLS, CKAP2 
+Negative:  FGB, APOA2, AFP, APOA1, GSTA2, GPC3, APOM, SERPINA1, RBP4, SMLR1 
+	   MTTP, FGA, VTN, APOB, SELENOP, AQP3, GSTA1, FABP1, APOC1, TTR 
+	   AKR1D1, FTL, SPINK1, LGALS3, GLUD1, HMGCS2, FGG, LGALS2, DPP4, CENPA 
+PC_ 2 
+Positive:  CRABP2, PTMA, SHISAL2B, LINC00467, CNTNAP2, FGF17, STMN2, CER1, IFITM1, MIR302CHG 
+	   SAMD3, MOBP, CRABP1, NPY, HSP90AB1, ANGPT2, L1TD1, DLK1, CHGA, ZIC3 
+	   GAS5, MIXL1, LHX1, C1orf61, FEZ1, NMU, SP5, LDHA, COL13A1, BST2 
+Negative:  S100A14, CALD1, APOA1, TAGLN, ANXA2, AFP, ANXA3, S100A13, NPPB, S100A16 
+	   S100A10, FGB, VCAN, GSTA2, APOB, SPARC, SLC2A3, TTN, ANKRD1, LAMB1 
+	   GPC3, ARL6IP1, FILIP1L, TUBA1C, TPM1, SLC3A2, APOA2, DIAPH3, SPINK1, PRSS23 
+PC_ 3 
+Positive:  DLK1, NPY, HHEX, IGFBP3, CD24, ROBO2, TTC3, APELA, FN1, MALAT1 
+	   TTR, CGA, TXNIP, MEIS2, ALCAM, NRP2, RHOBTB3, CGN, RIPPLY3, OXTR 
+	   TGFB2, ONECUT1, GRB14, SNCAIP, ADGRG6, SOX11, HES1, TMC5, DMD, ADAM28 
+Negative:  MIR302CHG, LINC01356, S100A10, CNTNAP2, CYP26A1, TDGF1, SHISAL2B, APOC1, GPC4, LINC00458 
+	   GJA1, SOX17, MOBP, IFITM1, BNIP3, DLGAP1-AS2, APOE, EOMES, TUBB2A, L1TD1 
+	   CER1, STMN2, FGF17, LINC00467, CALM1, SERPINB9, TRDN, IER3, ZIC3, SAMD3 
+PC_ 4 
+Positive:  ANKRD1, RGS5, KRT8, COL4A1, GATA3, KRT18, ADM, TAGLN, S100A14, NPPB 
+	   MXI1, BMP2, TTN, KRT19, JADE1, GLIPR2, PPFIBP2, MYL7, S100A13, PCAT14 
+	   PTPN13, ACTA1, SLC2A3, SERPINE2, S100A16, CCDC141, RHOBTB3, CCN1, FAM184A, TPM1 
+Negative:  UBE2C, TOP2A, CCNB1, TPX2, AURKA, MKI67, DLGAP5, PTTG1, CENPE, CENPF 
+	   SERPINA1, HMMR, CKS2, FGB, ASPM, BIRC5, SGO2, DEPDC1, CKAP2, AFP 
+	   PIF1, PLK1, KPNA2, NDC80, GTSE1, CDC20, CDCA8, ARL6IP1, CCNA2, BUB1 
+PC_ 5 
+Positive:  SERPINE2, S100A10, S100A14, APOA1, RGS5, S100A13, GATA3, DENND2C, APOC1, NEK2 
+	   PPFIBP2, VCAN, PTPN13, DYNLT3, CCKBR, PEG10, APOM, LRP2, LINC01356, MXI1 
+	   MTTP, CA4, DPP4, FGD6, CYP4X1, SYTL5, IGFBP6, FAM184A, S100A16, SAMD11 
+Negative:  TMSB4X, ANXA1, PRSS23, CAVIN1, TAGLN, HPGD, ACTC1, PALLD, SOX2, VIM 
+	   CLDN10, SPINK1, TRIML2, SERPINA5, UGP2, KRT7, ESRG, MYL9, TFAP2A, TPM1 
+	   RARRES2, TNFRSF12A, NPPB, EDN1, NMRK2, SERPINB9, SFRP2, VCL, ACTA1, POU5F1 
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  gene = col_character(),
+  chr = col_character(),
+  tss = col_double(),
+  end = col_double()
+)
+Parsed with column specification:
+cols(
+  .default = col_double(),
+  X1 = col_character()
+)
+See spec(...) for full column specifications.
+Performing log-normalization
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Centering and scaling data matrix
+  |                                                                              |                                                                      |   0%  |                                                                              |=====                                                                 |   7%  |                                                                              |=========                                                             |  13%  |                                                                              |==============                                                        |  20%  |                                                                              |===================                                                   |  27%  |                                                                              |=======================                                               |  33%  |                                                                              |============================                                          |  40%  |                                                                              |=================================                                     |  47%  |                                                                              |=====================================                                 |  53%  |                                                                              |==========================================                            |  60%  |                                                                              |===============================================                       |  67%  |                                                                              |===================================================                   |  73%  |                                                                              |========================================================              |  80%  |                                                                              |=============================================================         |  87%  |                                                                              |=================================================================     |  93%  |                                                                              |======================================================================| 100%
+PC_ 1 
+Positive:  TOP2A, CENPF, HMGB2, UBE2C, TPX2, MKI67, DLGAP5, ASPM, CCNB1, PTTG1 
+	   SMC4, NUF2, AURKA, HMMR, CENPE, TTK, ARL6IP1, SGO2, TUBA1B, BIRC5 
+	   CDK1, CDCA8, CKAP2, CCNA2, NDC80, BUB1, KIF2C, CKS2, KIF23, DEPDC1 
+Negative:  BST2, PLN, COL3A1, TECRL, TNNI1, MAGI2-AS3, ANGPT1, FBXO32, TNNT2, SCN7A 
+	   BEX1, MIR100HG, MEG3, ABCA8, COL14A1, CXCL12, ROBO2, GATA6-AS1, CRIP2, HEY1 
+	   LINC02381, BCO2, MEIS2, ARID5B, MATN2, EMC10, PLAT, SFRP1, IGFBP3, MALAT1 
+PC_ 2 
+Positive:  CRABP1, SOX2, SFRP1, SFRP2, DLK1, GPC3, MAP2, SIX1, CDH6, TMSB4X 
+	   MARCKS, HOTAIRM1, NEFM, SAT1, PTMA, NRG1, HESX1, ZBTB16, NKAIN4, NASP 
+	   CCDC160, ZIC2, TPX2, MAF, CKS2, CDH11, NMU, TFAP2A, UCHL1, MIR205HG 
+Negative:  TTN, MYL7, TPM1, MYL4, NEBL, TNNI1, TNNT2, VIM, RGS5, MYH6 
+	   EMC10, ACTC1, S100A10, CSRP2, NID2, GATA6-AS1, RHOBTB3, TGFB2, DGKI, CTSV 
+	   CGNL1, MYOCD, HAPLN1, CCDC141, RGS4, HAS2, KRT18, COL1A1, NRP2, TRIM55 
+PC_ 3 
+Positive:  TAGLN, CALD1, TMSB4X, PRSS23, TUBA1A, TNNT2, TPM1, ANXA1, ACTA2, GPC3 
+	   EMC10, FN1, NEXN, VCL, EDN1, CCN2, PLS3, UCHL1, PLN, MAGI2-AS3 
+	   TECRL, MYL9, IGFBP7, FILIP1, CCN1, ACTN1, PALLD, MYH6, TNNI1, SLC8A1 
+Negative:  CCDC34, TMEM88, HAND1, KRT19, GAS5, GATA6-AS1, VIM, LIX1, PDGFRA, NPM1 
+	   LINC00458, PRRX1, HOXB-AS3, HAS2, RGS4, APOC1, XIST, LUM, RGS5, LINC01356 
+	   SLC40A1, FOXH1, CNTNAP2, S100A10, HMGA1, BMP4, MAB21L2, LINC02381, KDR, HOXB2 
+PC_ 4 
+Positive:  TNNT2, TNNI1, MYH6, TTN, EMC10, TOP2A, NEBL, PLN, TECRL, CENPE 
+	   CENPF, PTTG1, ASPM, UBE2C, DLGAP5, CCNB1, MKI67, AURKA, HMMR, SGO2 
+	   MALAT1, MYL4, PIF1, KIF14, MEF2C, NUF2, TPX2, DEPDC1, DGKI, PLK1 
+Negative:  ANXA1, ANXA2, TAGLN, S100A11, KRT18, KRT8, ANXA3, S100A10, ANKRD1, LUM 
+	   GABRP, KRT19, CALD1, CAVIN1, FTL, CCND2, CCN1, ID1, IER3, NPPB 
+	   HAND1, MTHFD2, IGFBP3, SPP1, TPM3, ARHGAP29, CCN2, BMP4, EPCAM, LGALS3 
+PC_ 5 
+Positive:  LUM, COL3A1, MAB21L2, PRRX1, IGFBP3, H19, HAND1, LINC02381, AKAP12, SLC9A3R1 
+	   MEST, HOXB-AS3, XIST, GUCY1A1, S100A10, SOX6, ITGA8, HOXB6, SPARC, PDE3A 
+	   COL1A2, BNC2, DSP, RGS4, KIFAP3, TSIX, CALD1, HOXB5, TECRL, ROBO2 
+Negative:  LINC00458, MIR302CHG, GYPB, HAS2, CNTNAP2, TUBB2A, HAPLN1, PCDH10, LINC01356, TTN 
+	   ART5, CCKBR, FGF10, SERPINE2, ISL1, SAMD3, CFC1, GYPE, NR0B1, L1TD1 
+	   LHX1, RIPPLY1, SLC2A3, BMPER, CYP1B1, FBN2, FYB2, TUBB2B, COL6A4P2, CRABP2 
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  gene = col_character(),
+  chr = col_character(),
+  tss = col_double(),
+  end = col_double()
+)
+Parsed with column specification:
+cols(
+  .default = col_double(),
+  X1 = col_character()
+)
+See spec(...) for full column specifications.
+Performing log-normalization
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Centering and scaling data matrix
+  |                                                                              |                                                                      |   0%  |                                                                              |=====                                                                 |   8%  |                                                                              |===========                                                           |  15%  |                                                                              |================                                                      |  23%  |                                                                              |======================                                                |  31%  |                                                                              |===========================                                           |  38%  |                                                                              |================================                                      |  46%  |                                                                              |======================================                                |  54%  |                                                                              |===========================================                           |  62%  |                                                                              |================================================                      |  69%  |                                                                              |======================================================                |  77%  |                                                                              |===========================================================           |  85%  |                                                                              |=================================================================     |  92%  |                                                                              |======================================================================| 100%
+PC_ 1 
+Positive:  CER1, MIR302CHG, MIXL1, OTX2, SERPINE2, TDGF1, LHX1, CYP26A1, DKK1, NTS 
+	   IER3, CDCA7L, BNIP3, EOMES, ARL4D, ZIC3, CBR1, FGF17, LINC01356, CHGA 
+	   GPC4, FAM24B, CRABP1, L1TD1, LZTS1, CALM1, GAL, DKK4, SHISAL2B, MGST2 
+Negative:  RGS5, LIX1, S100A10, VIM, TMEM88, PMP22, PRTG, KRT18, RGS4, CCBE1 
+	   MYL4, CTSV, HAPLN1, KRT8, HAND1, CYB5A, HOXB-AS3, PKP2, ARL4C, PRRX1 
+	   CCDC34, ATF7IP2, KRT19, NID2, MYL7, DUSP6, BMP4, CD24, BAMBI, PTPN13 
+PC_ 2 
+Positive:  KRT19, HAPLN1, RGS5, HSP90AB1, HOXB-AS3, GATA6-AS1, RGS4, MYL4, LIX1, S100A10 
+	   KRT18, CCBE1, VIM, CYB5A, TMEM88, HAND1, PKP2, PMP22, HAND2, XIST 
+	   GUCY1A1, PRRX1, RIPOR2, LUM, LINC02381, MYL7, ATF7IP2, PODXL, TXNL4B, HOXB6 
+Negative:  TOP2A, UBE2C, CENPF, TPX2, DLGAP5, AURKA, HMGB2, MKI67, ASPM, CCNB1 
+	   HMMR, ARL6IP1, CENPE, CKS2, SGO2, PTTG1, DEPDC1, CDK1, BIRC5, SMC4 
+	   KIF2C, TTK, CKAP2, NDC80, NUF2, BUB1B, BUB1, CDCA8, KIF23, CCNA2 
+PC_ 3 
+Positive:  SERPINB9, CBR1, LINC01356, GAL, TDGF1, GSTO1, IFITM1, LINC00467, RSPO3, MIXL1 
+	   CALM1, TPM1, DKK4, MTRNR2L1, EPCAM, IER3, FGF17, WNT8A, COL1A2, AKAP12 
+	   CNTNAP2, BST2, FGF4, TUBB2B, SHISAL2B, ID1, SNHG14, CYP26A1, MGST1, VAMP8 
+Negative:  TOP2A, HAPLN1, UBE2C, GYPE, AURKA, HMMR, TPX2, DLGAP5, HMGB2, CCNB1 
+	   MKI67, GYPB, DEPDC1, CRABP2, PTTG1, PIF1, CDCA8, CENPF, BIRC5, NDC80 
+	   NRG1, ARL6IP1, KIF23, ASPM, CKS2, CLGN, KIF2C, SGO2, KIF20A, PLK1 
+PC_ 4 
+Positive:  DKK4, FGF17, CYP26A1, RGS4, EPCAM, FOXA2, TDGF1, CER1, HOXB-AS3, SOX17 
+	   UBE2C, HHEX, GPC4, CCKBR, HLA-DQB1, RGS5, IFITM1, PTTG1, PRRX1, AURKA 
+	   ARL6IP1, HMMR, PKP2, DKK1, LINC01356, NODAL, CD9, CHGA, LINC02381, CCNB1 
+Negative:  APLNR, CDH11, CRABP2, FBN2, NTS, NES, SERPINE2, PCDH19, COLEC12, WNT5A 
+	   COL5A1, MSX1, SPARC, LIPG, ALPK2, ENO1, CADM1, MTRNR2L1, KLHL4, COL1A2 
+	   BEX1, HAPLN1, IRX3, BMP4, SCD, HAS2, TTN, NASP, KCNK17, NCL 
+PC_ 5 
+Positive:  NTS, WNT8A, MSGN1, RSPO3, HES7, GPC3, RBP1, WNT5A, CDX2, PPP1R17 
+	   PCDH19, HOXB-AS3, NASP, MEST, HOTAIRM1, DLL1, TBXT, AKAP12, RIPPLY2, ID3 
+	   CCND1, PTMA, PCNA, HSP90AA1, SLIT2, KCNK17, FGF19, PMAIP1, LINC00467, ID1 
+Negative:  CER1, DKK1, ANGPT2, MIR302CHG, RHOBTB3, NRP2, GYPB, HAPLN1, HAS2, DKK4 
+	   OTX2, GATA6-AS1, CHGA, LHX1, GYPE, LINC00458, GPC4, FGF17, APOE, CCKBR 
+	   CYP26A1, CPE, NRG1, TDGF1, MALAT1, TMOD1, TRG-AS1, RFPL2, CALB1, IER3 
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  gene = col_character(),
+  chr = col_character(),
+  tss = col_double(),
+  end = col_double()
+)
+Parsed with column specification:
+cols(
+  X1 = col_character(),
+  X2 = col_double(),
+  X3 = col_double(),
+  X4 = col_double(),
+  X5 = col_double(),
+  X6 = col_double(),
+  X7 = col_double(),
+  X8 = col_double(),
+  X9 = col_double(),
+  X10 = col_double(),
+  X11 = col_double(),
+  X12 = col_double(),
+  X13 = col_double(),
+  X14 = col_double(),
+  X15 = col_double(),
+  X16 = col_double(),
+  X17 = col_double()
+)
+Performing log-normalization
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Centering and scaling data matrix
+  |                                                                              |                                                                      |   0%  |                                                                              |=====                                                                 |   8%  |                                                                              |===========                                                           |  15%  |                                                                              |================                                                      |  23%  |                                                                              |======================                                                |  31%  |                                                                              |===========================                                           |  38%  |                                                                              |================================                                      |  46%  |                                                                              |======================================                                |  54%  |                                                                              |===========================================                           |  62%  |                                                                              |================================================                      |  69%  |                                                                              |======================================================                |  77%  |                                                                              |===========================================================           |  85%  |                                                                              |=================================================================     |  92%  |                                                                              |======================================================================| 100%
+PC_ 1 
+Positive:  TMSB4X, TAGLN, CALD1, COL3A1, S100A10, ANXA1, ANXA2, RAI14, FILIP1L, SPARC 
+	   ACTN1, KRT18, S100A11, EDN1, KLF6, CDH11, MARCKS, ARID5B, KRT8, PLK2 
+	   PRSS23, CCN2, MTHFD2, IGFBP3, FHL1, VIM, CAVIN1, PLS3, UCHL1, ITGA1 
+Negative:  EMC10, MYH6, TNNT2, TNNI1, MYL4, NEBL, TTN, MYL7, ACTC1, MYL3 
+	   TNNC1, SMPX, TRIM55, TRDN, PPP1R12B, HRC, TPM1, ACTN2, CMYA5, ENO3 
+	   MYBPC3, LDB3, SLC8A1, TCEA3, PDK1, GATA6-AS1, VCAN, PRDX1, CCDC141, PLN 
+PC_ 2 
+Positive:  TOP2A, CENPF, UBE2C, MKI67, ASPM, DLGAP5, NUF2, TPX2, HMGB2, PTTG1 
+	   CCNB1, CDK1, BIRC5, CENPE, CCNA2, DEPDC1, SGO2, TTK, KIF2C, KIF14 
+	   HMMR, NDC80, GTSE1, BUB1, CDCA8, CKAP2, AURKA, SMC4, BUB1B, KIF20B 
+Negative:  PDLIM3, TAGLN, BEX1, ARID5B, FILIP1L, HBEGF, MYOZ2, CAVIN1, RAI14, DMD 
+	   ACTA1, PRSS35, FHL1, NPPA, BDNF, CALD1, HSPB1, CCN2, CSRP3, INHBA 
+	   ITGA1, KLF6, CDC42EP3, TUBA1A, PLN, PLK2, TMSB4X, ATF3, LMCD1, SLN 
+PC_ 3 
+Positive:  VIM, COL3A1, CRABP2, LUM, PTMA, IGFBP3, FN1, HAS2, BST2, TGFBI 
+	   CRHBP, PRTG, SERPINE2, ACTG2, MEST, HAPLN1, LIX1, GATA6-AS1, TFPI, ID3 
+	   APLNR, TFPI2, DCN, PDGFRA, FOXH1, LGALS1, ANGPT1, NPY, PLK2, BMP4 
+Negative:  ANKRD1, MYOZ2, ACTA1, NPPB, NPPA, SYNPO2L, CSRP3, ACTN2, MYH7, NEXN 
+	   SMPX, HSPB1, MYL9, CRYAB, CAVIN1, TPM1, TNNC1, MYL7, NES, TAGLN 
+	   UGP2, MYH11, CNN1, CDC42EP3, HACD1, PLN, TNNT2, CLCN6, MYOM1, SORBS2 
+PC_ 4 
+Positive:  NPPA, NPPB, MYL7, ANKRD1, CSRP3, MYOZ2, UBE2C, CRYAB, CCNB1, ACTA1 
+	   GTSE1, DEPDC1, CDCA8, MYL3, CDK1, NUF2, DLGAP5, TOP2A, TAGLN, PTTG1 
+	   AFP, CCNA2, TNNC1, HMMR, TPX2, CENPF, KPNA2, ASPM, CDC20, NEK2 
+Negative:  PRTG, MEF2C, DUSP6, DGKI, NID2, FN1, VCAN, MYOCD, GPC3, HAS2 
+	   PTPN13, PDGFRA, PCDH7, TTN, CCDC80, DSP, MTRNR2L1, JAG1, TTC3, CCDC141 
+	   CRABP2, CPE, PDK1, SLIT2, GATA6-AS1, BMP2, SLC2A3, COL1A1, VIM, NRP2 
+PC_ 5 
+Positive:  TECRL, BEX1, PDLIM3, PLN, TNNT2, COL14A1, BMP5, TRH, SFRP1, MALAT1 
+	   PBX3, PRDX1, GAP43, MATN2, MYH11, MTRNR2L1, MAP1B, FHL1, SLN, NR2F1 
+	   CDC42EP3, THSD7A, FILIP1L, FAM13C, ALDH3A2, SOX9, TBX5, ACSM3, HEY1, NR2F2 
+Negative:  KRT18, TNNC1, MYL3, PRSS23, KRT8, ANKRD1, ACTC1, RHOBTB3, GAPDH, KRT19 
+	   ENO1, ANXA1, MYL7, HAPLN1, SLC2A3, ID1, ANXA3, MASP1, HSPE1, APOE 
+	   LDHA, MGST1, NPPB, ID3, ANXA2, HSPD1, CCN2, HMGA1, NPM1, ACTA2 
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  gene = col_character(),
+  chr = col_character(),
+  tss = col_double(),
+  end = col_double()
+)
+Parsed with column specification:
+cols(
+  X1 = col_character(),
+  X2 = col_double(),
+  X3 = col_double(),
+  X4 = col_double(),
+  X5 = col_double(),
+  X6 = col_double(),
+  X7 = col_double(),
+  X8 = col_double(),
+  X9 = col_double(),
+  X10 = col_double(),
+  X11 = col_double(),
+  X12 = col_double(),
+  X13 = col_double(),
+  X14 = col_double(),
+  X15 = col_double(),
+  X16 = col_double(),
+  X17 = col_double(),
+  X18 = col_double()
+)
+Performing log-normalization
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Centering and scaling data matrix
+  |                                                                              |                                                                      |   0%  |                                                                              |=====                                                                 |   7%  |                                                                              |=========                                                             |  13%  |                                                                              |==============                                                        |  20%  |                                                                              |===================                                                   |  27%  |                                                                              |=======================                                               |  33%  |                                                                              |============================                                          |  40%  |                                                                              |=================================                                     |  47%  |                                                                              |=====================================                                 |  53%  |                                                                              |==========================================                            |  60%  |                                                                              |===============================================                       |  67%  |                                                                              |===================================================                   |  73%  |                                                                              |========================================================              |  80%  |                                                                              |=============================================================         |  87%  |                                                                              |=================================================================     |  93%  |                                                                              |======================================================================| 100%
+PC_ 1 
+Positive:  TOP2A, CENPF, UBE2C, MKI67, TPX2, HMGB2, DLGAP5, ASPM, CCNB1, SMC4 
+	   PTTG1, CDK1, CENPE, BIRC5, NDC80, TUBA1B, NUF2, HMMR, AURKA, CKAP2 
+	   CDCA8, GTSE1, TTK, KIF2C, CCNA2, SGO2, ARL6IP1, KIF23, KIF11, DEPDC1 
+Negative:  FTL, COL3A1, MALAT1, SPARC, DCN, ARID5B, RSPO3, APOE, NPY, SELENOP 
+	   ARHGEF3, NPNT, SLC40A1, SLN, KCNQ1OT1, STMN2, COL1A2, AQP3, PLK2, CST3 
+	   COL21A1, BST2, CRISPLD2, LBH, XIST, HOPX, HPCAL4, IGF1, FILIP1L, LMCD1 
+PC_ 2 
+Positive:  DCN, FRZB, LUM, ANXA2, CSRP2, NPNT, EZR, S100A10, COBLL1, SLC9A3R1 
+	   PRSS35, PODXL, SPARC, SLC40A1, CAVIN1, STK26, HAND1, OGFRL1, ANXA1, TPM1 
+	   COL3A1, KRT18, KRT19, MME, NPY, SLC2A1, SLIT2, PKP2, ANXA3, ANXA8 
+Negative:  SFRP1, TECRL, NR2F1, LIX1, CXCL12, DUSP6, DLK1, CRABP2, RBP1, ROBO2 
+	   FN1, TGFB2, BMP5, DCX, LRRTM1, ACSM3, NTS, IFI16, ID3, FOXC1 
+	   TMSB4X, FAM13C, BEX1, KLHL4, PBX3, JUN, LHX2, SCN7A, COL8A1, HEY1 
+PC_ 3 
+Positive:  TAGLN, TMSB4X, ACTA2, FN1, KRT18, SERPINE2, UCHL1, ACTN1, CALD1, PRSS23 
+	   FILIP1, TECRL, VCL, RAI14, TPM2, KRT8, PLS3, MYL9, CRABP2, MAP1B 
+	   ANKRD1, PDLIM3, FAM13C, TUBA1A, SULF1, PLK2, NRP2, TNC, CXCL14, LIMA1 
+Negative:  DCN, HAND1, CCDC34, LINC02381, BST2, LUM, TOP2A, HMGB2, DSC2, CENPF 
+	   SHISA3, RSPO3, LRRN3, STX18, FRZB, POSTN, PLAT, DLGAP5, MKI67, ITGA6 
+	   PMP22, UBE2C, PRPH, PTTG1, PROK1, BIRC5, KRT19, TPX2, RIPOR3, ID2 
+PC_ 4 
+Positive:  COL1A2, COL3A1, BST2, VCAN, H19, TGFBR3, HAND1, NCAM1, TGFBI, CDH11 
+	   IGFBP3, LBH, HAS2, CXCL12, SFRP1, CRABP2, PLAGL1, MLLT3, RHOBTB3, CTSB 
+	   SELENOP, DSC2, SHISA3, TFPI, CPED1, EPHA7, PALLD, MFAP4, GPC3, MAB21L2 
+Negative:  KRT18, MGST1, S100A10, TECRL, EZR, PLAC9, IGFBP5, TPM1, SULF1, TBX18 
+	   TNNT1, MGARP, LRP2, GAP43, PRSS35, CALB2, ALKAL2, TNNT2, KRT8, WNT2B 
+	   FAM13C, ANXA2, PODXL, TERF1, RARRES2, STK26, UCHL1, RSRP1, LEPR, ANXA3 
+PC_ 5 
+Positive:  TECRL, IGFBP5, FRMD4B, RSRP1, TGFB2, EZR, PBX3, ANK3, TNNT1, STK26 
+	   MIR503HG, LIX1, PODXL, DSP, SVIL, TNNI1, WT1, MALAT1, DSC2, APOE 
+	   PLPP3, LEPR, SCN7A, TBX18, ROBO2, ITGA6, ARHGAP10, AKAP12, LRRTM1, PLAT 
+Negative:  TAGLN, ACTA2, ACTG2, IGFBP3, MTHFD2, ACTN1, IGFBP7, CRABP2, MME, SERPINE2 
+	   ANXA3, PRSS35, SYNPO2, PSAT1, AFP, ANKRD1, CCN4, TPM2, S100A11, CALD1 
+	   LMCD1, BDNF, FRZB, CHAC1, STC2, VCL, GBP1, TPM1, THY1, TUBA1B 
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)
+Parsed with column specification:
+cols(
+  snp = col_character(),
+  gene = col_character()
+)

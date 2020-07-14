@@ -1,18 +1,21 @@
-gene.locs <- readRDS("../data/biomart_genepos.rds")
-snp.locs <- read.table("../data/snp_locations_05cut.txt")
-gene.locs$chromosome_name <- factor(paste0("chr", gene.locs$chromosome_name), levels=levels(snp.locs$chr))
+library(readr)
+library(dplyr)
+library(tibble)
 
-for (c in levels(gene.locs$chromosome_name)) {
-  chr.locs <- subset(gene.locs, chromosome_name==c)
-  for (g in chr.locs$hgnc_symbol) {
-    tss <- chr.locs[chr.locs$hgnc_symbol==g,"transcription_start_site"]
-    if (g == chr.locs$hgnc_symbol[1]) {
-      gv <- subset(snp.locs, (chr==c) & (pos >= tss-1e6) & (pos <= tss+1e6))
-    } else {
-      gv <- rbind(gv, subset(snp.locs, (chr==c) & (pos >= tss-1e6) & (pos <= tss+1e6)))
-    }
-  }
-  saveRDS(gv, paste0("../data/gene_snps/", c, ".rds"))
-  rm(chr.locs, tss, gv)
+gene.locs <- tibble(readRDS("../data/biomart_genepos.rds"))
+snp.locs <- read_tsv("../data/snp_locations_05cut.txt", skip=1, col_names=F)
+colnames(snp.locs) <- c("snp", "chr", "pos")
+gene.locs$chromosome_name <- paste0("chr", gene.locs$chromosome_name)
+
+get_snps <- function(g, chrom, slocs=snp.locs, glocs=gene.locs) {
+  tss = filter(glocs, hgnc_symbol==g)$transcription_start_site
+  gv = select(filter(slocs, (chr==chrom) & (pos >= tss-1e6) & (pos <= tss+1e6)), snp)
+  gv$gene = g
+  gv
 }
 
+for (c in unique(gene.locs$chromosome_name)) {
+  chr.locs <- filter(gene.locs, chromosome_name==c)
+  tests.c <- bind_rows(lapply(chr.locs$hgnc_symbol, get_snps, chrom=c))
+  write_tsv(tests.c, paste0("../data/gene_snps/", c, ".tsv"))
+}

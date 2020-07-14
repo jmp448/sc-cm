@@ -1,1 +1,18 @@
 Note that the current default version of R is 3.6.1.
+
+Attaching package: 'dplyr'
+
+The following objects are masked from 'package:stats':
+
+    filter, lag
+
+The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union
+
+Parsed with column specification:
+cols(
+  X1 = col_character(),
+  X2 = col_character(),
+  X3 = col_double()
+)
