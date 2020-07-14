@@ -13,6 +13,8 @@ library(slingshot)
 # [genes, expression value, cell line, day]
 # produces expression PCs and cell line PCs based on the preprocessed data
 
+# TODO: change day column to time
+
 ## set hyperparameters
 # we can choose what kind of data we want to extract
 # if `all`, then pseudobulk is for all cells
@@ -73,7 +75,7 @@ counts <- counts[,colnames(counts) %in% hgnc$hgnc_symbol]
 tables <- c()
 for (id in levels(inds)) {
   for (day in levels(days)) {
-    cells <- rownames(inds)[inds == id & days == day]
+    cells <- names(inds)[inds == id & days == day]
     # otherwise can't do colSums
     if (length(cells) < 2) {next}
     expr <- colSums(counts[cells,])
@@ -175,4 +177,5 @@ plot(clpc_percent, pch = 20, xlim = c(1,13), xlab = "cell line PC Number",
 cellline_pc <- cellline_usv$u[, 1:10]
 saveRDS(cellline_pc, paste0("data/dynamic_pb/lineage", which_data, "_celllinePC10.rds"))
 
+# TODO: filter pseudobulk so only keep those w/ cell line PCs 
 
