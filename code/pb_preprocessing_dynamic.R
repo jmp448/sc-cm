@@ -1,5 +1,3 @@
-rm(list = ls())
-
 library(Seurat)
 library(dplyr)
 library(data.table)
@@ -9,6 +7,8 @@ library(slingshot)
 
 # this script preprocesses the single cell expression data into pseudobulk 
 # either for all cells or for cells of a single lineage assigned by slingshot
+# currently the timesteps are collection days
+# TODO: for lineage specific cells, use deciles of pseudotime as timesteps
 # formats it into a data.table, where column values are:
 # [genes, expression value, cell line, day]
 # produces expression PCs and cell line PCs based on the preprocessed data
