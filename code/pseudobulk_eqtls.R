@@ -9,22 +9,22 @@ cell_types <- c("day0", "day1", "day3", "day5", "day7", "day11", "day15",
 for (d in cell_types) {
   for (npc in c(0, 1,2,3,4,5,6,7,8,9)) {
     # Genotype file name
-    SNP_file_name = paste0("../data/", d, "/genotypes_05cut.txt")
-    snps_location_file_name = paste0("../data/", d, "/snp_locations_05cut.txt")
+    SNP_file_name = paste0("../data/static_pb/", d, "/genotypes_05cut.txt")
+    snps_location_file_name = paste0("../data/static_pb/", d, "/snp_locations_05cut.txt")
     
     # Gene expression file name
-    expression_file_name = paste0("../data/", d, "/pseudobulk_preprocessed.txt")
-    gene_location_file_name = paste0("../data/", d, "/gene_locations.txt")
+    expression_file_name = paste0("../data/static_pb/", d, "/pseudobulk_preprocessed.txt")
+    gene_location_file_name = paste0("../data/static_pb/", d, "/gene_locations.txt")
     
     # Covariates file name
     if (npc==0) {
       covariates_file_name = character()
     } else {
-      covariates_file_name = paste0("../data/", d, "/", npc, "pcs.txt")
+      covariates_file_name = paste0("../data/static_pb/", d, "/", npc, "pcs.txt")
     }
     
     # Output file name
-    output_file_name_cis = paste0("../data/", d, "/", npc, "_cisqtl.txt")
+    output_file_name_cis = paste0("../results/static_pb/", d, "/", npc, "_cisqtl.txt")
     output_file_name_tra = tempfile()
     
     # Only associations significant at this level will be saved
@@ -34,7 +34,6 @@ for (d in cell_types) {
     # Error covariance matrix
     # Set to numeric() for identity.
     errorCovariance = numeric();
-    # errorCovariance = read.table("Sample_Data/errorCovariance.txt");
     
     # Distance for local gene-SNP pairs
     cisDist = 1e6;

@@ -5,7 +5,7 @@ library(ggplot2)
 library(biomaRt)
 library(reshape2)
 
-sc <- readRDS("../data/mitofilt_singlets.umap.cc.rds")
+sc <- readRDS("../../sc3/data/mitofilt_singlets.umap.cc.rds")
 
 counts <- sc@assays[["RNA"]]@counts
 type <- sc$cell.type
@@ -14,13 +14,13 @@ inds <- sc$demux.sng1
 
 # subset counts to what appears in biomart
 # this section can be removed after full seurat obj use
-hgnc <- readRDS("../../cm_eqtl/data/biomart_genepos.rds")
+hgnc <- readRDS("../data/biomart_genepos.rds")
 hgnc <- subset(hgnc, hgnc_symbol %in% rownames(counts))
 counts <- counts[rownames(counts) %in% hgnc$hgnc_symbol,]
 
 # get snp and genotype matrices
-snps <- read.table("../../cm_eqtl/data/genotypes_05cut.txt", header=T, row.names=1)
-snp_locs <- read.table("../../cm_eqtl/data/snp_locations_05cut.txt", header=T, row.names=1)
+snps <- read.table("../data/genotypes_05cut.txt", header=T, row.names=1)
+snp_locs <- read.table("../data/snp_locations_05cut.txt", header=T, row.names=1)
 
 # get pseudobulk for each desired combo
 getPseudobulk <- function(mat, ind) {
@@ -41,14 +41,14 @@ for (ct in levels(type)) {
   
   # raw pseudobulk
   mat.summary <- getPseudobulk(mat, inds_ct)
-  saveRDS(mat.summary, paste0("../../cm_eqtl/data/pseudobulk/", ct, "/pseudobulk_raw.rds"))
+  saveRDS(mat.summary, paste0("../data/static_pb/", ct, "/raw.rds"))
   
   # subset to individuals that have at least 100k UMI
   reads <- colSums(mat.summary)
   inds.here <- names(reads[reads>100000])
   mat.summary <- mat.summary[,inds.here]
   snps_ct <- snps[,inds.here]
-  write.table(snps_ct, paste0("../../cm_eqtl/data/pseudobulk/", ct, "/genotypes.txt"),
+  write.table(snps_ct, paste0("../data/static_pb/", ct, "/genotypes.txt"),
               quote=F, sep="\t")
   
   # subset to snps with MAF>=0.05 for the individuals present
@@ -56,10 +56,10 @@ for (ct in levels(type)) {
   mafs <- sapply(afs, function(x){min(x,1-x)})
   mafs <- mafs[mafs>=0.05]
   snps_ct <- snps_ct[names(mafs),]
-  write.table(snps_ct, file=paste0("../../cm_eqtl/data/pseudobulk/", ct, "/genotypes_05cut.txt"),
+  write.table(snps_ct, file=paste0("../data/static_pb/", ct, "/genotypes_05cut.txt"),
               quote=F, sep="\t")
   snp_ct_locs <- snp_locs[names(mafs),]
-  write.table(snp_ct_locs, file=paste0("../../cm_eqtl/data/pseudobulk/", ct, "/snp_locations_05cut.txt"),
+  write.table(snp_ct_locs, file=paste0("../data/static_pb/", ct, "/snp_locations_05cut.txt"),
               quote=F, sep="\t")
   
   # subset to genes with at least 5 reads in at least 5 samples
@@ -71,14 +71,14 @@ for (ct in levels(type)) {
   
   # log normalize
   mat.lognorm <- apply(mat.summary, 2, function(c){log(10^4*c/sum(c)+1)})
-  saveRDS(mat.lognorm, paste0("../../cm_eqtl/data/pseudobulk/", ct, "/pseudobulk_lognorm.rds"))
-  write.table(mat.lognorm, paste0("../../cm_eqtl/data/pseudobulk/", ct, "/pseudobulk_lognorm.txt"),
+  saveRDS(mat.lognorm, paste0("../data/static_pb/", ct, "/lognorm.rds"))
+  write.table(mat.lognorm, paste0("../data/static_pb/", ct, "/lognorm.txt"),
               quote=F, sep="\t", row.names=T, col.names=T)
   
   # center and scale
   mat.preprocessed <- t(apply(mat.lognorm, 1, function(g){(g-mean(g))/sd(g)}))
-  saveRDS(mat.preprocessed, paste0("../../cm_eqtl/data/pseudobulk/", ct, "/pseudobulk_preprocessed.rds"))
-  write.table(mat.preprocessed, paste0("../../cm_eqtl/data/pseudobulk/", ct, "/pseudobulk_preprocessed.txt"),
+  saveRDS(mat.preprocessed, paste0("../data/static_pb/", ct, "/preprocessed.rds"))
+  write.table(mat.preprocessed, paste0("../data/static_pb/", ct, "/preprocessed.txt"),
               quote=F, sep="\t", row.names=T, col.names=T)
   
   # subset gene list to match those included
@@ -87,8 +87,8 @@ for (ct in levels(type)) {
   colnames(hgnc_ct) <- c("gene", "chr", "tss")
   hgnc_ct$end <- hgnc_ct$tss + 1
   hgnc_ct$chr <- paste0("chr", hgnc_ct$chr)
-  saveRDS(hgnc_ct, paste0("../../cm_eqtl/data/pseudobulk/", ct, "/gene_locations.rds"))
-  write.table(hgnc_ct, paste0("../../cm_eqtl/data/pseudobulk/", ct, "/gene_locations.txt"),
+  saveRDS(hgnc_ct, paste0("../data/static_pb/", ct, "/gene_locations.rds"))
+  write.table(hgnc_ct, paste0("../data/static_pb/", ct, "/gene_locations.txt"),
               quote=F, sep="\t", row.names=F)
 }
 rm(hgnc_ct, snp_ct_locs, snps_ct, ct, inds_ct, sd_ct)
@@ -100,14 +100,14 @@ for (d in levels(day)) {
   
   # raw pseudobulk
   mat.summary <- getPseudobulk(mat, inds_d)
-  saveRDS(mat.summary, paste0("../../cm_eqtl/data/pseudobulk/", d, "/pseudobulk_raw.rds"))
+  saveRDS(mat.summary, paste0("../data/static_pb/", d, "/raw.rds"))
   
   # subset to individuals that have at least 100k UMI
   reads <- colSums(mat.summary)
   inds.here <- names(reads[reads>100000])
   mat.summary <- mat.summary[,inds.here]
   snps_d <- snps[,inds.here]
-  write.table(snps_d, paste0("../../cm_eqtl/data/pseudobulk/", d, "/genotypes.txt"),
+  write.table(snps_d, paste0("../data/static_pb/", d, "/genotypes.txt"),
               quote=F, sep="\t")
   
   # subset to snps with MAF>=0.05 for the individuals present
@@ -115,10 +115,10 @@ for (d in levels(day)) {
   mafs <- sapply(afs, function(x){min(x,1-x)})
   mafs <- mafs[mafs>=0.05]
   snps_d <- snps_d[names(mafs),]
-  write.table(snps_d, file=paste0("../../cm_eqtl/data/pseudobulk/", d, "/genotypes_05cut.txt"),
+  write.table(snps_d, file=paste0("../data/static_pb/", d, "/genotypes_05cut.txt"),
               quote=F, sep="\t")
   snp_d_locs <- snp_locs[names(mafs),]
-  write.table(snp_d_locs, file=paste0("../../cm_eqtl/data/pseudobulk/", d, "/snp_locations_05cut.txt"),
+  write.table(snp_d_locs, file=paste0("../data/static_pb/", d, "/snp_locations_05cut.txt"),
               quote=F, sep="\t")
   
   # subset to genes with at least 5 reads in at least 5 samples
@@ -130,14 +130,14 @@ for (d in levels(day)) {
   
   # log normalize
   mat.lognorm <- apply(mat.summary, 2, function(c){log(10^4*c/sum(c)+1)})
-  saveRDS(mat.lognorm, paste0("../../cm_eqtl/data/pseudobulk/", d, "/pseudobulk_lognorm.rds"))
-  write.table(mat.lognorm, paste0("../../cm_eqtl/data/pseudobulk/", d, "/pseudobulk_lognorm.txt"),
+  saveRDS(mat.lognorm, paste0("../data/static_pb/", d, "/lognorm.rds"))
+  write.table(mat.lognorm, paste0("../data/static_pb/", d, "/lognorm.txt"),
               quote=F, sep="\t", row.names=T, col.names=T)
   
   # center and scale
   mat.preprocessed <- t(apply(mat.lognorm, 1, function(g){(g-mean(g))/sd(g)}))
-  saveRDS(mat.preprocessed, paste0("../../cm_eqtl/data/pseudobulk/", d, "/pseudobulk_preprocessed.rds"))
-  write.table(mat.preprocessed, paste0("../../cm_eqtl/data/pseudobulk/", d, "/pseudobulk_preprocessed.txt"),
+  saveRDS(mat.preprocessed, paste0("../data/static_pb/", d, "/preprocessed.rds"))
+  write.table(mat.preprocessed, paste0("../data/static_pb/", d, "/preprocessed.txt"),
               quote=F, sep="\t", row.names=T, col.names=T)
   
   # subset gene list to match those included
@@ -146,7 +146,7 @@ for (d in levels(day)) {
   colnames(hgnc_d) <- c("gene", "chr", "tss")
   hgnc_d$end <- hgnc_d$tss + 1
   hgnc_d$chr <- paste0("chr", hgnc_d$chr)
-  saveRDS(hgnc_d, paste0("../../cm_eqtl/data/pseudobulk/", d, "/gene_locations.rds"))
-  write.table(hgnc_d, paste0("../../cm_eqtl/data/pseudobulk/", d, "/gene_locations.txt"),
+  saveRDS(hgnc_d, paste0("../data/static_pb/", d, "/gene_locations.rds"))
+  write.table(hgnc_d, paste0("../data/static_pb/", d, "/gene_locations.txt"),
               quote=F, sep="\t", row.names=F)
 }
