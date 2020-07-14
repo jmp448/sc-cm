@@ -1,17 +1,18 @@
 gene.locs <- readRDS("../data/biomart_genepos.rds")
-gene.locs$chr <- factor(paste0("chr", gene.locs$chromosome_name))
-rownames(gene.locs) <- gene.locs$hgnc_symbol
-genes <- rownames(gene.locs)
-
 snp.locs <- read.table("../data/snp_locations_05cut.txt")
+gene.locs$chromosome_name <- factor(paste0("chr", gene.locs$chromosome_name), levels=levels(snp.locs$chr))
 
-# write a function to take each gene, find its location, find all snps w/in 1MB of the TSS
-find.snps <- function(gene) {
-  g.snps <- subset(snp.locs, (chr==gene.locs[gene, "chr"]) & (pos >= gene.locs[gene, "transcription_start_site"]-1e6) & (pos <= gene.locs[gene, "transcription_start_site"]+1e6))
-  g.snps
+for (c in levels(gene.locs$chromosome_name)) {
+  chr.locs <- subset(gene.locs, chromosome_name==c)
+  for (g in chr.locs$hgnc_symbol) {
+    tss <- chr.locs[chr.locs$hgnc_symbol==g,"transcription_start_site"]
+    if (g == chr.locs$hgnc_symbol[1]) {
+      gv <- subset(snp.locs, (chr==c) & (pos >= tss-1e6) & (pos <= tss+1e6))
+    } else {
+      gv <- rbind(gv, subset(snp.locs, (chr==c) & (pos >= tss-1e6) & (pos <= tss+1e6)))
+    }
+  }
+  saveRDS(gv, paste0("../data/gene_snps/", c, ".rds"))
+  rm(chr.locs, tss, gv)
 }
-g <- genes[1]
-gv <- find.snps(g)
-for (g in genes[2:length(genes)]) {
-  gv <- rbind(gv, find.snps(g))
-}
+
