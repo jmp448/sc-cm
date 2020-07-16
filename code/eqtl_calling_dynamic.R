@@ -45,6 +45,7 @@ for (tid in unique(data$test_id)) {
   gv_str <- strsplit(tid, "_")[[1]]
   g <- gv_str[1]
   v <- paste0(gv_str[2], "_", gv_str[3])
+  # each row in output has the gene name, variant name, and the p-value for the genotype/time interaction term
   test_results <- rbind(test_results, data.table("gene" = g, "variant" = v, "p-value" = coefs["genotype_x_time", "p.KR"]))
 }
 saveRDS(test_results, paste0(output_dir, "lineage", which_data, "_", which_time, "_chr", chr, ".rds"))
