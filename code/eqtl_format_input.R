@@ -51,9 +51,9 @@ for (i in 1:dim(gene_snps)[1]) {
     output <- rbind(output, g_expr)
   }
   print(paste0(i, " in ", dim(gene_snps)[1]))
-  if (i == 200) {
-    break
-  }
+  # if (i == 200) {
+  #   break
+  # }
 }
 saveRDS(output, paste0(data_dir, "input_lineage", which_data, "_", which_time, "_chr", chr, ".rds"))
 
