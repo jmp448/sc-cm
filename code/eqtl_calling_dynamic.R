@@ -17,8 +17,8 @@ if (num_expr_pc > 0) {for (i in 1:num_expr_pc) {expr_pcs[i] <- paste0("exprPC", 
 cellline_pcs <- c()
 if (num_cellline_pc > 0) {for (i in 1:num_cellline_pc) {cellline_pcs[i] <- paste0("celllinePC", i)}}
 
-test_results <- list()
-index <- 1
+test_results <- data.table()
+# loop through all the gene-variant pairs in `data`
 for (tid in unique(data$test_id)) {
   variable_columns <- c('value', 'time', 'genotype', 'id')
   variable_columns <- append(variable_columns, expr_pcs)
@@ -41,11 +41,10 @@ for (tid in unique(data$test_id)) {
   # use the Kenward-Roger approximation to get approximate degrees of freedom and the t-distribution to get p-values
   # source: https://www.r-bloggers.com/three-ways-to-get-parameter-specific-p-values-from-lmer/
   df.KR <- get_Lb_ddf(model, fixef(model))
-  coefs$p.KR <- 2 * (1 - pt(abs(coefs$t.value), df.KR))  
-  test_results[[index]] <- coefs
-  print(paste0(index, " in ", length(unique(data$test_id))))
-  index <- index + 1
+  coefs$p.KR <- 2 * (1 - pt(abs(coefs$t.value), df.KR)) 
+  gv_str <- strsplit(tid, "_")[[1]]
+  g <- gv_str[1]
+  v <- paste0(gv_str[2], "_", gv_str[3])
+  test_results <- rbind(test_results, data.table("gene" = g, "variant" = v, "p-value" = coefs["genotype_x_time", "p.KR"]))
 }
-names(test_results) <- unique(data$test_id)
 saveRDS(test_results, paste0(output_dir, "lineage", which_data, "_", which_time, "_chr", chr, ".rds"))
-
