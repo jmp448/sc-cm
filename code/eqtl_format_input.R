@@ -1,3 +1,5 @@
+library(data.table)
+
 data_dir <- "data/dynamic_pb/"
 chr <- "13"
 num_expr_pc <- 10
@@ -12,13 +14,13 @@ genotypes <- read.table("data/genotypes_05cut.txt", header=T, row.names=1)
 
 expr_pc <- expr_pc[, 1:num_expr_pc]
 expr_pc_names <- c()
-for (i in 1:num_expr_pc) {expr_pc_names[i] <- paste0("expr_PC", i)}
+for (i in 1:num_expr_pc) {expr_pc_names[i] <- paste0("exprPC", i)}
 colnames(expr_pc) <- expr_pc_names
 expr_pc <- data.table(sample_id = rownames(expr_pc), expr_pc)
 
 cellline_pc <- cellline_pc[, 1:num_cellline_pc]
 cellline_pc_names <- c()
-for (i in 1:num_cellline_pc) {cellline_pc_names[i] <- paste0("cellline_PC", i)}
+for (i in 1:num_cellline_pc) {cellline_pc_names[i] <- paste0("celllinePC", i)}
 colnames(cellline_pc) <- cellline_pc_names
 cellline_pc <- data.table(id = rownames(cellline_pc), cellline_pc)
 
@@ -30,6 +32,9 @@ for (i in 1:dim(gene_snps)[1]) {
   v <- gene_snps[i, "variant"]
   g_expr <- expr[gene == g]
   g_expr$variant <- v
+  # use the gene name and variant name to create a unique id for each gene-variant pair to test
+  # so it's easy to extract the data for each test
+  g_expr$test_id <- paste0(g, "_", v)
   
   # use variant and id to get genotype
   v_geno <- t(genotypes[v,])
@@ -46,8 +51,11 @@ for (i in 1:dim(gene_snps)[1]) {
     output <- rbind(output, g_expr)
   }
   print(paste0(i, " in ", dim(gene_snps)[1]))
+  if (i == 200) {
+    break
+  }
 }
-saveRDS(output, paste0(data_dir, "input_lineage", which_data, "_", which_time, ".rds"))
+saveRDS(output, paste0(data_dir, "input_lineage", which_data, "_", which_time, "_chr", chr, ".rds"))
 
 
 
